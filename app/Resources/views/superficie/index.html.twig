@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Superficie list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Superficieriego</th>
+                <th>Superficieaprovechable</th>
+                <th>Superficienoaprovechable</th>
+                <th>Superficieproduccion</th>
+                <th>Superficiesembrada</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for superficie in superficies %}
+            <tr>
+                <td><a href="{{ path('superficie_show', { 'id': superficie.id }) }}">{{ superficie.fecha }}</a></td>
+                <td>{{ superficie.superficieRiego }}</td>
+                <td>{{ superficie.superficieAprovechable }}</td>
+                <td>{{ superficie.superficieNoAprovechable }}</td>
+                <td>{{ superficie.superficieProduccion }}</td>
+                <td>{{ superficie.superficieSembrada }}</td>
+                <td>{{ superficie.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('superficie_show', { 'id': superficie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('superficie_edit', { 'id': superficie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('superficie_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

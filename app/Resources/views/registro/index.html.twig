@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Registro list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Registroparto</th>
+                <th>Registrosecado</th>
+                <th>Pesonacer</th>
+                <th>Pesodestete</th>
+                <th>Pesoano</th>
+                <th>Pasajeleche</th>
+                <th>Observaciones</th>
+                <th>Mensual</th>
+                <th>Semanal</th>
+                <th>Diario</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for registro in registros %}
+            <tr>
+                <td><a href="{{ path('registro_show', { 'id': registro.id }) }}">{{ registro.registroParto }}</a></td>
+                <td>{% if registro.registroSecado %}Yes{% else %}No{% endif %}</td>
+                <td>{% if registro.pesoNacer %}Yes{% else %}No{% endif %}</td>
+                <td>{% if registro.pesoDestete %}Yes{% else %}No{% endif %}</td>
+                <td>{% if registro.pesoAno %}Yes{% else %}No{% endif %}</td>
+                <td>{% if registro.pasajeLeche %}Yes{% else %}No{% endif %}</td>
+                <td>{{ registro.observaciones }}</td>
+                <td>{{ registro.mensual }}</td>
+                <td>{{ registro.semanal }}</td>
+                <td>{{ registro.diario }}</td>
+                <td>{% if registro.fecha %}{{ registro.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ registro.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('registro_show', { 'id': registro.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('registro_edit', { 'id': registro.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('registro_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>TipoExplotacion list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numerovacabecerro</th>
+                <th>Numerovacamaute</th>
+                <th>Numerovacanovillo</th>
+                <th>Leche</th>
+                <th>Carne</th>
+                <th>Dobleproposito</th>
+                <th>Extensivo</th>
+                <th>Intesivo</th>
+                <th>Semiintensivo</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tipoExplotacion in tipoExplotacions %}
+            <tr>
+                <td><a href="{{ path('tipoexplotacion_show', { 'id': tipoExplotacion.id }) }}">{{ tipoExplotacion.numeroVacaBecerro }}</a></td>
+                <td>{{ tipoExplotacion.numeroVacaMaute }}</td>
+                <td>{{ tipoExplotacion.numeroVacaNovillo }}</td>
+                <td>{% if tipoExplotacion.leche %}Yes{% else %}No{% endif %}</td>
+                <td>{% if tipoExplotacion.carne %}Yes{% else %}No{% endif %}</td>
+                <td>{% if tipoExplotacion.dobleProposito %}Yes{% else %}No{% endif %}</td>
+                <td>{% if tipoExplotacion.extensivo %}Yes{% else %}No{% endif %}</td>
+                <td>{% if tipoExplotacion.intesivo %}Yes{% else %}No{% endif %}</td>
+                <td>{% if tipoExplotacion.semiIntensivo %}Yes{% else %}No{% endif %}</td>
+                <td>{% if tipoExplotacion.fecha %}{{ tipoExplotacion.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ tipoExplotacion.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('tipoexplotacion_show', { 'id': tipoExplotacion.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('tipoexplotacion_edit', { 'id': tipoExplotacion.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('tipoexplotacion_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>OtrasEspecie</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Numbufalinosbutoros</th>
+                <td>{{ otrasEspecie.numBufalinosButoros }}</td>
+            </tr>
+            <tr>
+                <th>Numbufalinosbufalas</th>
+                <td>{{ otrasEspecie.numBufalinosBufalas }}</td>
+            </tr>
+            <tr>
+                <th>Numbufalinosbubillos</th>
+                <td>{{ otrasEspecie.numBufalinosBubillos }}</td>
+            </tr>
+            <tr>
+                <th>Numbufalinosbumautes</th>
+                <td>{{ otrasEspecie.numBufalinosBumautes }}</td>
+            </tr>
+            <tr>
+                <th>Numbufalinosbucerros</th>
+                <td>{{ otrasEspecie.numBufalinosBucerros }}</td>
+            </tr>
+            <tr>
+                <th>Numcaprinoscabrio</th>
+                <td>{{ otrasEspecie.numCaprinosCabrio }}</td>
+            </tr>
+            <tr>
+                <th>Numcaprinoscabra</th>
+                <td>{{ otrasEspecie.numCaprinosCabra }}</td>
+            </tr>
+            <tr>
+                <th>Numcaprinoscabritones</th>
+                <td>{{ otrasEspecie.numCaprinosCabritones }}</td>
+            </tr>
+            <tr>
+                <th>Numcaprinoscabritonas</th>
+                <td>{{ otrasEspecie.numCaprinosCabritonas }}</td>
+            </tr>
+            <tr>
+                <th>Numcaprinoscabritos</th>
+                <td>{{ otrasEspecie.numCaprinosCabritos }}</td>
+            </tr>
+            <tr>
+                <th>Numovinoscarnero</th>
+                <td>{{ otrasEspecie.numOvinosCarnero }}</td>
+            </tr>
+            <tr>
+                <th>Numovinosoveja</th>
+                <td>{{ otrasEspecie.numOvinosOveja }}</td>
+            </tr>
+            <tr>
+                <th>Numovinosborregos</th>
+                <td>{{ otrasEspecie.numOvinosBorregos }}</td>
+            </tr>
+            <tr>
+                <th>Numovinosborregas</th>
+                <td>{{ otrasEspecie.numOvinosBorregas }}</td>
+            </tr>
+            <tr>
+                <th>Numovinoscorderos</th>
+                <td>{{ otrasEspecie.numOvinosCorderos }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if otrasEspecie.fecha %}{{ otrasEspecie.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ otrasEspecie.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('otrasespecie_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('otrasespecie_edit', { 'id': otrasEspecie.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

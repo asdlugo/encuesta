@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ManejoReproductivo</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Tecnmontanat</th>
+                <td>{% if manejoReproductivo.tecnMontaNat %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tecnmontacontrolada</th>
+                <td>{% if manejoReproductivo.tecnMontaControlada %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tecninseminacion</th>
+                <td>{% if manejoReproductivo.tecnInseminacion %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tecntransfembriones</th>
+                <td>{% if manejoReproductivo.tecnTransfEmbriones %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if manejoReproductivo.fecha %}{{ manejoReproductivo.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ manejoReproductivo.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('manejoreproductivo_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('manejoreproductivo_edit', { 'id': manejoReproductivo.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

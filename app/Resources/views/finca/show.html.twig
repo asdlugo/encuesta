@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Finca</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Ubicacion</th>
+                <td>{{ finca.ubicacion }}</td>
+            </tr>
+            <tr>
+                <th>Idparroquia</th>
+                <td>{{ finca.idParroquia }}</td>
+            </tr>
+            <tr>
+                <th>Idsector</th>
+                <td>{{ finca.idSector }}</td>
+            </tr>
+            <tr>
+                <th>Idcaserio</th>
+                <td>{{ finca.idCaserio }}</td>
+            </tr>
+            <tr>
+                <th>Gpsutmnorte</th>
+                <td>{{ finca.gpsUtmNorte }}</td>
+            </tr>
+            <tr>
+                <th>Gpsutmeste</th>
+                <td>{{ finca.gpsUtmEste }}</td>
+            </tr>
+            <tr>
+                <th>Idcondicionvia</th>
+                <td>{{ finca.idCondicionVia }}</td>
+            </tr>
+            <tr>
+                <th>Documentointi</th>
+                <td>{{ finca.documentoInti }}</td>
+            </tr>
+            <tr>
+                <th>Hierroinsai</th>
+                <td>{{ finca.hierroInsai }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ finca.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('finca_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('finca_edit', { 'id': finca.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

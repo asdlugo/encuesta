@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Registro</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Registroparto</th>
+                <td>{% if registro.registroParto %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Registrosecado</th>
+                <td>{% if registro.registroSecado %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pesonacer</th>
+                <td>{% if registro.pesoNacer %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pesodestete</th>
+                <td>{% if registro.pesoDestete %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pesoano</th>
+                <td>{% if registro.pesoAno %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pasajeleche</th>
+                <td>{% if registro.pasajeLeche %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Observaciones</th>
+                <td>{{ registro.observaciones }}</td>
+            </tr>
+            <tr>
+                <th>Mensual</th>
+                <td>{{ registro.mensual }}</td>
+            </tr>
+            <tr>
+                <th>Semanal</th>
+                <td>{{ registro.semanal }}</td>
+            </tr>
+            <tr>
+                <th>Diario</th>
+                <td>{{ registro.diario }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if registro.fecha %}{{ registro.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ registro.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('registro_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('registro_edit', { 'id': registro.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>OtrasEspecie list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numbufalinosbutoros</th>
+                <th>Numbufalinosbufalas</th>
+                <th>Numbufalinosbubillos</th>
+                <th>Numbufalinosbumautes</th>
+                <th>Numbufalinosbucerros</th>
+                <th>Numcaprinoscabrio</th>
+                <th>Numcaprinoscabra</th>
+                <th>Numcaprinoscabritones</th>
+                <th>Numcaprinoscabritonas</th>
+                <th>Numcaprinoscabritos</th>
+                <th>Numovinoscarnero</th>
+                <th>Numovinosoveja</th>
+                <th>Numovinosborregos</th>
+                <th>Numovinosborregas</th>
+                <th>Numovinoscorderos</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for otrasEspecie in otrasEspecies %}
+            <tr>
+                <td><a href="{{ path('otrasespecie_show', { 'id': otrasEspecie.id }) }}">{{ otrasEspecie.numBufalinosButoros }}</a></td>
+                <td>{{ otrasEspecie.numBufalinosBufalas }}</td>
+                <td>{{ otrasEspecie.numBufalinosBubillos }}</td>
+                <td>{{ otrasEspecie.numBufalinosBumautes }}</td>
+                <td>{{ otrasEspecie.numBufalinosBucerros }}</td>
+                <td>{{ otrasEspecie.numCaprinosCabrio }}</td>
+                <td>{{ otrasEspecie.numCaprinosCabra }}</td>
+                <td>{{ otrasEspecie.numCaprinosCabritones }}</td>
+                <td>{{ otrasEspecie.numCaprinosCabritonas }}</td>
+                <td>{{ otrasEspecie.numCaprinosCabritos }}</td>
+                <td>{{ otrasEspecie.numOvinosCarnero }}</td>
+                <td>{{ otrasEspecie.numOvinosOveja }}</td>
+                <td>{{ otrasEspecie.numOvinosBorregos }}</td>
+                <td>{{ otrasEspecie.numOvinosBorregas }}</td>
+                <td>{{ otrasEspecie.numOvinosCorderos }}</td>
+                <td>{% if otrasEspecie.fecha %}{{ otrasEspecie.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ otrasEspecie.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('otrasespecie_show', { 'id': otrasEspecie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('otrasespecie_edit', { 'id': otrasEspecie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('otrasespecie_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

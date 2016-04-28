@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Finca list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ubicacion</th>
+                <th>Idparroquia</th>
+                <th>Idsector</th>
+                <th>Idcaserio</th>
+                <th>Gpsutmnorte</th>
+                <th>Gpsutmeste</th>
+                <th>Idcondicionvia</th>
+                <th>Documentointi</th>
+                <th>Hierroinsai</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for finca in fincas %}
+            <tr>
+                <td><a href="{{ path('finca_show', { 'id': finca.id }) }}">{{ finca.ubicacion }}</a></td>
+                <td>{{ finca.idParroquia }}</td>
+                <td>{{ finca.idSector }}</td>
+                <td>{{ finca.idCaserio }}</td>
+                <td>{{ finca.gpsUtmNorte }}</td>
+                <td>{{ finca.gpsUtmEste }}</td>
+                <td>{{ finca.idCondicionVia }}</td>
+                <td>{{ finca.documentoInti }}</td>
+                <td>{{ finca.hierroInsai }}</td>
+                <td>{{ finca.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('finca_show', { 'id': finca.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('finca_edit', { 'id': finca.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('finca_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

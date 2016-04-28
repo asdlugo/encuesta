@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Destino</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Numautoconsumo</th>
+                <td>{{ destino.numAutoconsumo }}</td>
+            </tr>
+            <tr>
+                <th>Numcria</th>
+                <td>{{ destino.numCria }}</td>
+            </tr>
+            <tr>
+                <th>Numlevante</th>
+                <td>{{ destino.numLevante }}</td>
+            </tr>
+            <tr>
+                <th>Numceba</th>
+                <td>{{ destino.numCeba }}</td>
+            </tr>
+            <tr>
+                <th>Numreproduccion</th>
+                <td>{{ destino.numReproduccion }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if destino.fecha %}{{ destino.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ destino.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('destino_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('destino_edit', { 'id': destino.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

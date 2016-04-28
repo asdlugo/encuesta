@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Productor list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Rif</th>
+                <th>Tlf1</th>
+                <th>Tlf2</th>
+                <th>Emal1</th>
+                <th>Email2</th>
+                <th>Sabeleer</th>
+                <th>Exproductor</th>
+                <th>Lugarhabitacion</th>
+                <th>Visible</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for productor in productors %}
+            <tr>
+                <td><a href="{{ path('productor_show', { 'id': productor.id }) }}">{{ productor.nombre }}</a></td>
+                <td>{{ productor.apellido }}</td>
+                <td>{{ productor.rif }}</td>
+                <td>{{ productor.tlf1 }}</td>
+                <td>{{ productor.tlf2 }}</td>
+                <td>{{ productor.emal1 }}</td>
+                <td>{{ productor.email2 }}</td>
+                <td>{% if productor.sabeLeer %}Yes{% else %}No{% endif %}</td>
+                <td>{{ productor.exProductor }}</td>
+                <td>{{ productor.lugarHabitacion }}</td>
+                <td>{% if productor.visible %}Yes{% else %}No{% endif %}</td>
+                <td>{{ productor.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('productor_show', { 'id': productor.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('productor_edit', { 'id': productor.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('productor_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

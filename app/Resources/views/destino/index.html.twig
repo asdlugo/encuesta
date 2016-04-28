@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Destino list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numautoconsumo</th>
+                <th>Numcria</th>
+                <th>Numlevante</th>
+                <th>Numceba</th>
+                <th>Numreproduccion</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for destino in destinos %}
+            <tr>
+                <td><a href="{{ path('destino_show', { 'id': destino.id }) }}">{{ destino.numAutoconsumo }}</a></td>
+                <td>{{ destino.numCria }}</td>
+                <td>{{ destino.numLevante }}</td>
+                <td>{{ destino.numCeba }}</td>
+                <td>{{ destino.numReproduccion }}</td>
+                <td>{% if destino.fecha %}{{ destino.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ destino.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('destino_show', { 'id': destino.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('destino_edit', { 'id': destino.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('destino_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

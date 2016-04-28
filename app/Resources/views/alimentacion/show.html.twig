@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Alimentacion</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Pastocortetipo1</th>
+                <td>{{ alimentacion.pastoCorteTipo1 }}</td>
+            </tr>
+            <tr>
+                <th>Pastocortehectarias1</th>
+                <td>{{ alimentacion.pastoCorteHectarias1 }}</td>
+            </tr>
+            <tr>
+                <th>Pastocortetipo2</th>
+                <td>{{ alimentacion.pastoCorteTipo2 }}</td>
+            </tr>
+            <tr>
+                <th>Pastocortehectareas2</th>
+                <td>{{ alimentacion.pastoCorteHectareas2 }}</td>
+            </tr>
+            <tr>
+                <th>Brachariatipo</th>
+                <td>{% if alimentacion.brachariaTipo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Brachariahectareas</th>
+                <td>{{ alimentacion.brachariaHectareas }}</td>
+            </tr>
+            <tr>
+                <th>Estrellatipo</th>
+                <td>{% if alimentacion.estrellaTipo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Estrellahectareas</th>
+                <td>{{ alimentacion.estrellaHectareas }}</td>
+            </tr>
+            <tr>
+                <th>Guineatipo</th>
+                <td>{% if alimentacion.guineaTipo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Guineahectareas</th>
+                <td>{{ alimentacion.guineaHectareas }}</td>
+            </tr>
+            <tr>
+                <th>Alemantipo</th>
+                <td>{% if alimentacion.alemanTipo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Alemanhectareas</th>
+                <td>{{ alimentacion.alemanHectareas }}</td>
+            </tr>
+            <tr>
+                <th>Canaazucartipo</th>
+                <td>{{ alimentacion.canaAzucarTipo }}</td>
+            </tr>
+            <tr>
+                <th>Canaazucarhectareas</th>
+                <td>{{ alimentacion.canaAzucarHectareas }}</td>
+            </tr>
+            <tr>
+                <th>Numpotrerostipo</th>
+                <td>{{ alimentacion.numPotrerosTipo }}</td>
+            </tr>
+            <tr>
+                <th>Numpotrerosareapromedio</th>
+                <td>{{ alimentacion.numPotrerosAreaPromedio }}</td>
+            </tr>
+            <tr>
+                <th>Silos</th>
+                <td>{{ alimentacion.silos }}</td>
+            </tr>
+            <tr>
+                <th>Siloscultivo</th>
+                <td>{{ alimentacion.silosCultivo }}</td>
+            </tr>
+            <tr>
+                <th>Toneladassiloscosechadas</th>
+                <td>{{ alimentacion.toneladasSilosCosechadas }}</td>
+            </tr>
+            <tr>
+                <th>Toneladassiloscosechadasobsv</th>
+                <td>{{ alimentacion.toneladasSilosCosechadasObsv }}</td>
+            </tr>
+            <tr>
+                <th>Suministraminerales</th>
+                <td>{% if alimentacion.suministraMinerales %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Suministramineraleskgsdias</th>
+                <td>{{ alimentacion.suministraMineralesKgsDias }}</td>
+            </tr>
+            <tr>
+                <th>Suministraconcentrado</th>
+                <td>{% if alimentacion.suministraConcentrado %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Suministraconcentradokgsdias</th>
+                <td>{{ alimentacion.suministraConcentradoKgsDias }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if alimentacion.fecha %}{{ alimentacion.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ alimentacion.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('alimentacion_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('alimentacion_edit', { 'id': alimentacion.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

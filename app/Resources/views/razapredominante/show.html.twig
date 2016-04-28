@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>RazaPredominante</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Numcebu</th>
+                <td>{{ razaPredominante.numCebu }}</td>
+            </tr>
+            <tr>
+                <th>Numcriollo</th>
+                <td>{{ razaPredominante.numCriollo }}</td>
+            </tr>
+            <tr>
+                <th>Numhulstein</th>
+                <td>{{ razaPredominante.numHulstein }}</td>
+            </tr>
+            <tr>
+                <th>Numpsuizo</th>
+                <td>{{ razaPredominante.numPSuizo }}</td>
+            </tr>
+            <tr>
+                <th>Nummestizo</th>
+                <td>{{ razaPredominante.numMestizo }}</td>
+            </tr>
+            <tr>
+                <th>Numotro</th>
+                <td>{{ razaPredominante.numOtro }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if razaPredominante.fecha %}{{ razaPredominante.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Numtoros</th>
+                <td>{{ razaPredominante.numToros }}</td>
+            </tr>
+            <tr>
+                <th>Numtorosreproductores</th>
+                <td>{{ razaPredominante.numTorosReproductores }}</td>
+            </tr>
+            <tr>
+                <th>Numvacasproduccion</th>
+                <td>{{ razaPredominante.numVacasProduccion }}</td>
+            </tr>
+            <tr>
+                <th>Numvacassecas</th>
+                <td>{{ razaPredominante.numVacasSecas }}</td>
+            </tr>
+            <tr>
+                <th>Numnovillos</th>
+                <td>{{ razaPredominante.numNovillos }}</td>
+            </tr>
+            <tr>
+                <th>Numnovillas</th>
+                <td>{{ razaPredominante.numNovillas }}</td>
+            </tr>
+            <tr>
+                <th>Nummautes</th>
+                <td>{{ razaPredominante.numMautes }}</td>
+            </tr>
+            <tr>
+                <th>Nummautas</th>
+                <td>{{ razaPredominante.numMautas }}</td>
+            </tr>
+            <tr>
+                <th>Numbecerros</th>
+                <td>{{ razaPredominante.numBecerros }}</td>
+            </tr>
+            <tr>
+                <th>Numbecerras</th>
+                <td>{{ razaPredominante.numBecerras }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ razaPredominante.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('razapredominante_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('razapredominante_edit', { 'id': razaPredominante.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

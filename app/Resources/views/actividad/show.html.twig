@@ -1,0 +1,360 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Actividad</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Corralescantidad</th>
+                <td>{{ actividad.corralesCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Corralesobservaciones</th>
+                <td>{{ actividad.corralesObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Mangacantidad</th>
+                <td>{{ actividad.mangaCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Mangaobservaciones</th>
+                <td>{{ actividad.mangaObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Bretescantidad</th>
+                <td>{{ actividad.bretesCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Bretesobservaciones</th>
+                <td>{{ actividad.bretesObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Romanacantidad</th>
+                <td>{{ actividad.romanaCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Romanaobservaciones</th>
+                <td>{{ actividad.romanaObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Salaordenocantidad</th>
+                <td>{{ actividad.salaOrdenoCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Salaordenoobservaciones</th>
+                <td>{{ actividad.salaOrdenoObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Bebederoscantidad</th>
+                <td>{{ actividad.bebederosCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Bebederosobservaciones</th>
+                <td>{{ actividad.bebederosObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Comederoscantidad</th>
+                <td>{{ actividad.comederosCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Comederosobservaciones</th>
+                <td>{{ actividad.comederosObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Cercoelectricocantidad</th>
+                <td>{{ actividad.cercoElectricoCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Cercoelectricoobservaciones</th>
+                <td>{{ actividad.cercoElectricoObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Numpotreroscantidad</th>
+                <td>{{ actividad.numPotrerosCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Numpotrerosobservaciones</th>
+                <td>{{ actividad.numPotrerosObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Hasxpotreroscantidad</th>
+                <td>{{ actividad.hasXPotrerosCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Hasxpotrerosobservaciones</th>
+                <td>{{ actividad.hasXPotrerosObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Plantaelectricacantidad</th>
+                <td>{{ actividad.plantaElectricaCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Plantaelectricaobservaciones</th>
+                <td>{{ actividad.plantaElectricaObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Tractores4x2cantidad</th>
+                <td>{{ actividad.tractores4x2Cantidad }}</td>
+            </tr>
+            <tr>
+                <th>Tractores4x2observaciones</th>
+                <td>{{ actividad.tractores4x2Observaciones }}</td>
+            </tr>
+            <tr>
+                <th>Tractores4x4cantidad</th>
+                <td>{{ actividad.tractores4x4Cantidad }}</td>
+            </tr>
+            <tr>
+                <th>Tractores4x4observaciones</th>
+                <td>{{ actividad.tractores4x4Observaciones }}</td>
+            </tr>
+            <tr>
+                <th>Galponescantidad</th>
+                <td>{{ actividad.galponesCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Galponesobservaciones</th>
+                <td>{{ actividad.galponesObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Siloscantidad</th>
+                <td>{{ actividad.silosCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Silosobservaciones</th>
+                <td>{{ actividad.silosObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Sembradoracantidad</th>
+                <td>{{ actividad.sembradoraCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Sembradoraobservaciones</th>
+                <td>{{ actividad.sembradoraObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Cosechadoracantidad</th>
+                <td>{{ actividad.cosechadoraCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Cosechadoraobservaciones</th>
+                <td>{{ actividad.cosechadoraObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Asperjadoracantidad</th>
+                <td>{{ actividad.asperjadoraCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Asperjadoraobservaciones</th>
+                <td>{{ actividad.asperjadoraObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Carretazorracantidad</th>
+                <td>{{ actividad.carretaZorraCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Carretazorraobservaciones</th>
+                <td>{{ actividad.carretaZorraObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Rotativacantidad</th>
+                <td>{{ actividad.rotativaCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Rotativaobservaciones</th>
+                <td>{{ actividad.rotativaObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Rolocantidad</th>
+                <td>{{ actividad.roloCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Roloobservaciones</th>
+                <td>{{ actividad.roloObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Aradocantidad</th>
+                <td>{{ actividad.aradoCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Aradoobservaciones</th>
+                <td>{{ actividad.aradoObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Surcadoracantidad</th>
+                <td>{{ actividad.surcadoraCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Surcadoraobservaciones</th>
+                <td>{{ actividad.surcadoraObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Abonadoracantidad</th>
+                <td>{{ actividad.abonadoraCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Abonadoraobservaciones</th>
+                <td>{{ actividad.abonadoraObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Embutidoracantidad</th>
+                <td>{{ actividad.embutidoraCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Embutidoraobservaciones</th>
+                <td>{{ actividad.embutidoraObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Vagonforrajerocantidad</th>
+                <td>{{ actividad.vagonForrajeroCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Vagonforrajeroobservaciones</th>
+                <td>{{ actividad.vagonForrajeroObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Bolsasensilarcantidad</th>
+                <td>{{ actividad.bolsasEnsilarCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Bolsasensilarobservaciones</th>
+                <td>{{ actividad.bolsasEnsilarObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Mecanicocantidad</th>
+                <td>{{ actividad.mecanicoCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Mecanicoobservaciones</th>
+                <td>{{ actividad.mecanicoObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Manualcantidad</th>
+                <td>{{ actividad.manualCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Manualobservaciones</th>
+                <td>{{ actividad.manualObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Tanquefriocantidad</th>
+                <td>{{ actividad.tanqueFrioCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Tanquefrioobservaciones</th>
+                <td>{{ actividad.tanqueFrioObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Cantarascantidad</th>
+                <td>{{ actividad.cantarasCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Cantarasobservaciones</th>
+                <td>{{ actividad.cantarasObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Filtrostelacantidad</th>
+                <td>{{ actividad.filtrosTelaCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Filtrostelaobservaciones</th>
+                <td>{{ actividad.filtrosTelaObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Paletascmtcantidad</th>
+                <td>{{ actividad.paletasCmtCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Paletascmtobservaciones</th>
+                <td>{{ actividad.paletasCmtObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Paletasfondonegrocantidad</th>
+                <td>{{ actividad.paletasFondoNegroCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Paletasfondonegroobservaciones</th>
+                <td>{{ actividad.paletasFondoNegroObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Reactivocmtcantidad</th>
+                <td>{{ actividad.reactivoCmtCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Reactivocmtobservaciones</th>
+                <td>{{ actividad.reactivoCmtObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Ordenotechocantidad</th>
+                <td>{{ actividad.ordenoTechoCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Ordenotechoobservaciones</th>
+                <td>{{ actividad.ordenoTechoObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Ordenopisocementocantidad</th>
+                <td>{{ actividad.ordenoPisoCementoCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Ordenopisocementoobservaciones</th>
+                <td>{{ actividad.ordenoPisoCementoObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Tanquenitrogenocantidad</th>
+                <td>{{ actividad.tanqueNitrogenoCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Tanquenitrogenoobservaciones</th>
+                <td>{{ actividad.tanqueNitrogenoObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Cajainseminacioncantidad</th>
+                <td>{{ actividad.cajaInseminacionCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Cajainseminacionobservacion</th>
+                <td>{{ actividad.cajaInseminacionObservacion }}</td>
+            </tr>
+            <tr>
+                <th>Pistoletainseminacioncantidad</th>
+                <td>{{ actividad.pistoletaInseminacionCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Pistoletainseminacionobservaciones</th>
+                <td>{{ actividad.pistoletaInseminacionObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Termodescongelarpajuelascantidad</th>
+                <td>{{ actividad.termoDescongelarPajuelasCantidad }}</td>
+            </tr>
+            <tr>
+                <th>Termodescongelarpajuelasobservaciones</th>
+                <td>{{ actividad.termoDescongelarPajuelasObservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if actividad.fecha %}{{ actividad.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ actividad.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('actividad_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('actividad_edit', { 'id': actividad.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

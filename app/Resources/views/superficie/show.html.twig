@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Superficie</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if superficie.fecha %}{{ superficie.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Superficieriego</th>
+                <td>{{ superficie.superficieRiego }}</td>
+            </tr>
+            <tr>
+                <th>Superficieaprovechable</th>
+                <td>{{ superficie.superficieAprovechable }}</td>
+            </tr>
+            <tr>
+                <th>Superficienoaprovechable</th>
+                <td>{{ superficie.superficieNoAprovechable }}</td>
+            </tr>
+            <tr>
+                <th>Superficieproduccion</th>
+                <td>{{ superficie.superficieProduccion }}</td>
+            </tr>
+            <tr>
+                <th>Superficiesembrada</th>
+                <td>{{ superficie.superficieSembrada }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ superficie.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('superficie_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('superficie_edit', { 'id': superficie.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

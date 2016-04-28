@@ -1,3 +1,75 @@
+encuesta_carne:
+    resource: "@EncuestaBundle/Controller/CarneController.php"
+    type:     annotation
+
+encuesta_raza_predominante:
+    resource: "@EncuestaBundle/Controller/RazaPredominanteController.php"
+    type:     annotation
+
+encuesta_alimentacion:
+    resource: "@EncuestaBundle/Controller/AlimentacionController.php"
+    type:     annotation
+
+encuesta_nivel_educacion:
+    resource: "@EncuestaBundle/Controller/NivelEducacionController.php"
+    type:     annotation
+
+encuesta_otras_especie:
+    resource: "@EncuestaBundle/Controller/OtrasEspecieController.php"
+    type:     annotation
+
+encuesta_actividad:
+    resource: "@EncuestaBundle/Controller/ActividadController.php"
+    type:     annotation
+
+encuesta_destino:
+    resource: "@EncuestaBundle/Controller/DestinoController.php"
+    type:     annotation
+
+encuesta_sistema_riego:
+    resource: "@EncuestaBundle/Controller/SistemaRiegoController.php"
+    type:     annotation
+
+encuesta_manejo_reproductivo:
+    resource: "@EncuestaBundle/Controller/ManejoReproductivoController.php"
+    type:     annotation
+
+encuesta_finca:
+    resource: "@EncuestaBundle/Controller/FincaController.php"
+    type:     annotation
+
+encuesta_financiamiento:
+    resource: "@EncuestaBundle/Controller/FinanciamientoController.php"
+    type:     annotation
+
+encuesta_fuente_agua:
+    resource: "@EncuestaBundle/Controller/FuenteAguaController.php"
+    type:     annotation
+
+encuesta_tipo_explotacion:
+    resource: "@EncuestaBundle/Controller/TipoExplotacionController.php"
+    type:     annotation
+
+encuesta_superficie:
+    resource: "@EncuestaBundle/Controller/SuperficieController.php"
+    type:     annotation
+
+encuesta_productor:
+    resource: "@EncuestaBundle/Controller/ProductorController.php"
+    type:     annotation
+
+encuesta_ordeno:
+    resource: "@EncuestaBundle/Controller/OrdenoController.php"
+    type:     annotation
+
+encuesta_condicion_via:
+    resource: "@EncuestaBundle/Controller/CondicionViaController.php"
+    type:     annotation
+
+encuesta_registro:
+    resource: "@EncuestaBundle/Controller/RegistroController.php"
+    type:     annotation
+
 
 homepage:
     pattern:   /

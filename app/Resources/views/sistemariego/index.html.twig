@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>SistemaRiego list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Riego</th>
+                <th>Tiporiegogravedad</th>
+                <th>Tiporiegoaspersion</th>
+                <th>Tiporiegomicroaspersion</th>
+                <th>Tiporiegogoteo</th>
+                <th>Tiporiegootro</th>
+                <th>Numsuperficie</th>
+                <th>Nummotobomba</th>
+                <th>Numcapacidadflujo</th>
+                <th>Condiciones</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sistemaRiego in sistemaRiegos %}
+            <tr>
+                <td><a href="{{ path('sistemariego_show', { 'id': sistemaRiego.id }) }}">{{ sistemaRiego.riego }}</a></td>
+                <td>{% if sistemaRiego.tiporiegoGravedad %}Yes{% else %}No{% endif %}</td>
+                <td>{% if sistemaRiego.tiporiegoAspersion %}Yes{% else %}No{% endif %}</td>
+                <td>{% if sistemaRiego.tiporiegoMicroaspersion %}Yes{% else %}No{% endif %}</td>
+                <td>{% if sistemaRiego.tiporiegoGoteo %}Yes{% else %}No{% endif %}</td>
+                <td>{% if sistemaRiego.tiporiegoOtro %}Yes{% else %}No{% endif %}</td>
+                <td>{{ sistemaRiego.numSuperficie }}</td>
+                <td>{{ sistemaRiego.numMotobomba }}</td>
+                <td>{{ sistemaRiego.numCapacidadFlujo }}</td>
+                <td>{{ sistemaRiego.condiciones }}</td>
+                <td>{% if sistemaRiego.fecha %}{{ sistemaRiego.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ sistemaRiego.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('sistemariego_show', { 'id': sistemaRiego.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('sistemariego_edit', { 'id': sistemaRiego.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sistemariego_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

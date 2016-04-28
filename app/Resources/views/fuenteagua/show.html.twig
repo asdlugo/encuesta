@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>FuenteAgua</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Pozo</th>
+                <td>{% if fuenteAgua.pozo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Represa</th>
+                <td>{% if fuenteAgua.represa %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Acueducto</th>
+                <td>{% if fuenteAgua.acueducto %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Laguna</th>
+                <td>{% if fuenteAgua.laguna %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Rioquebrada</th>
+                <td>{% if fuenteAgua.rioQuebrada %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Manantial</th>
+                <td>{% if fuenteAgua.manantial %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Publico</th>
+                <td>{% if fuenteAgua.publico %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Privado</th>
+                <td>{% if fuenteAgua.privado %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if fuenteAgua.fecha %}{{ fuenteAgua.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ fuenteAgua.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fuenteagua_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('fuenteagua_edit', { 'id': fuenteAgua.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

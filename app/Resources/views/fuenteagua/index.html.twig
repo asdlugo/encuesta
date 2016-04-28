@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>FuenteAgua list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pozo</th>
+                <th>Represa</th>
+                <th>Acueducto</th>
+                <th>Laguna</th>
+                <th>Rioquebrada</th>
+                <th>Manantial</th>
+                <th>Publico</th>
+                <th>Privado</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fuenteAgua in fuenteAguas %}
+            <tr>
+                <td><a href="{{ path('fuenteagua_show', { 'id': fuenteAgua.id }) }}">{{ fuenteAgua.pozo }}</a></td>
+                <td>{% if fuenteAgua.represa %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fuenteAgua.acueducto %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fuenteAgua.laguna %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fuenteAgua.rioQuebrada %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fuenteAgua.manantial %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fuenteAgua.publico %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fuenteAgua.privado %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fuenteAgua.fecha %}{{ fuenteAgua.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ fuenteAgua.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fuenteagua_show', { 'id': fuenteAgua.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fuenteagua_edit', { 'id': fuenteAgua.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fuenteagua_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

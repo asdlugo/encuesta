@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Financiamiento</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Bancoinstitucion</th>
+                <td>{% if financiamiento.bancoInstitucion %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Requevacas</th>
+                <td>{% if financiamiento.requeVacas %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Requenovillas</th>
+                <td>{% if financiamiento.requeNovillas %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if financiamiento.fecha %}{{ financiamiento.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ financiamiento.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('financiamiento_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('financiamiento_edit', { 'id': financiamiento.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

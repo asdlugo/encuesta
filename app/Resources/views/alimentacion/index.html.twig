@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Alimentacion list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pastocortetipo1</th>
+                <th>Pastocortehectarias1</th>
+                <th>Pastocortetipo2</th>
+                <th>Pastocortehectareas2</th>
+                <th>Brachariatipo</th>
+                <th>Brachariahectareas</th>
+                <th>Estrellatipo</th>
+                <th>Estrellahectareas</th>
+                <th>Guineatipo</th>
+                <th>Guineahectareas</th>
+                <th>Alemantipo</th>
+                <th>Alemanhectareas</th>
+                <th>Canaazucartipo</th>
+                <th>Canaazucarhectareas</th>
+                <th>Numpotrerostipo</th>
+                <th>Numpotrerosareapromedio</th>
+                <th>Silos</th>
+                <th>Siloscultivo</th>
+                <th>Toneladassiloscosechadas</th>
+                <th>Toneladassiloscosechadasobsv</th>
+                <th>Suministraminerales</th>
+                <th>Suministramineraleskgsdias</th>
+                <th>Suministraconcentrado</th>
+                <th>Suministraconcentradokgsdias</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for alimentacion in alimentacions %}
+            <tr>
+                <td><a href="{{ path('alimentacion_show', { 'id': alimentacion.id }) }}">{{ alimentacion.pastoCorteTipo1 }}</a></td>
+                <td>{{ alimentacion.pastoCorteHectarias1 }}</td>
+                <td>{{ alimentacion.pastoCorteTipo2 }}</td>
+                <td>{{ alimentacion.pastoCorteHectareas2 }}</td>
+                <td>{% if alimentacion.brachariaTipo %}Yes{% else %}No{% endif %}</td>
+                <td>{{ alimentacion.brachariaHectareas }}</td>
+                <td>{% if alimentacion.estrellaTipo %}Yes{% else %}No{% endif %}</td>
+                <td>{{ alimentacion.estrellaHectareas }}</td>
+                <td>{% if alimentacion.guineaTipo %}Yes{% else %}No{% endif %}</td>
+                <td>{{ alimentacion.guineaHectareas }}</td>
+                <td>{% if alimentacion.alemanTipo %}Yes{% else %}No{% endif %}</td>
+                <td>{{ alimentacion.alemanHectareas }}</td>
+                <td>{{ alimentacion.canaAzucarTipo }}</td>
+                <td>{{ alimentacion.canaAzucarHectareas }}</td>
+                <td>{{ alimentacion.numPotrerosTipo }}</td>
+                <td>{{ alimentacion.numPotrerosAreaPromedio }}</td>
+                <td>{{ alimentacion.silos }}</td>
+                <td>{{ alimentacion.silosCultivo }}</td>
+                <td>{{ alimentacion.toneladasSilosCosechadas }}</td>
+                <td>{{ alimentacion.toneladasSilosCosechadasObsv }}</td>
+                <td>{% if alimentacion.suministraMinerales %}Yes{% else %}No{% endif %}</td>
+                <td>{{ alimentacion.suministraMineralesKgsDias }}</td>
+                <td>{% if alimentacion.suministraConcentrado %}Yes{% else %}No{% endif %}</td>
+                <td>{{ alimentacion.suministraConcentradoKgsDias }}</td>
+                <td>{% if alimentacion.fecha %}{{ alimentacion.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ alimentacion.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('alimentacion_show', { 'id': alimentacion.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('alimentacion_edit', { 'id': alimentacion.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('alimentacion_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

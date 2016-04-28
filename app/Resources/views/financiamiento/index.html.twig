@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Financiamiento list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Bancoinstitucion</th>
+                <th>Requevacas</th>
+                <th>Requenovillas</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for financiamiento in financiamientos %}
+            <tr>
+                <td><a href="{{ path('financiamiento_show', { 'id': financiamiento.id }) }}">{{ financiamiento.bancoInstitucion }}</a></td>
+                <td>{% if financiamiento.requeVacas %}Yes{% else %}No{% endif %}</td>
+                <td>{% if financiamiento.requeNovillas %}Yes{% else %}No{% endif %}</td>
+                <td>{% if financiamiento.fecha %}{{ financiamiento.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ financiamiento.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('financiamiento_show', { 'id': financiamiento.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('financiamiento_edit', { 'id': financiamiento.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('financiamiento_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Carne</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Numanimales</th>
+                <td>{{ carne.numAnimales }}</td>
+            </tr>
+            <tr>
+                <th>Pesopromventa</th>
+                <td>{{ carne.pesoPromVenta }}</td>
+            </tr>
+            <tr>
+                <th>Edadparaventa</th>
+                <td>{{ carne.edadParaVenta }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if carne.fecha %}{{ carne.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ carne.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('carne_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('carne_edit', { 'id': carne.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

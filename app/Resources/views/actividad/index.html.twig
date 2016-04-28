@@ -1,0 +1,203 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Actividad list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Corralescantidad</th>
+                <th>Corralesobservaciones</th>
+                <th>Mangacantidad</th>
+                <th>Mangaobservaciones</th>
+                <th>Bretescantidad</th>
+                <th>Bretesobservaciones</th>
+                <th>Romanacantidad</th>
+                <th>Romanaobservaciones</th>
+                <th>Salaordenocantidad</th>
+                <th>Salaordenoobservaciones</th>
+                <th>Bebederoscantidad</th>
+                <th>Bebederosobservaciones</th>
+                <th>Comederoscantidad</th>
+                <th>Comederosobservaciones</th>
+                <th>Cercoelectricocantidad</th>
+                <th>Cercoelectricoobservaciones</th>
+                <th>Numpotreroscantidad</th>
+                <th>Numpotrerosobservaciones</th>
+                <th>Hasxpotreroscantidad</th>
+                <th>Hasxpotrerosobservaciones</th>
+                <th>Plantaelectricacantidad</th>
+                <th>Plantaelectricaobservaciones</th>
+                <th>Tractores4x2cantidad</th>
+                <th>Tractores4x2observaciones</th>
+                <th>Tractores4x4cantidad</th>
+                <th>Tractores4x4observaciones</th>
+                <th>Galponescantidad</th>
+                <th>Galponesobservaciones</th>
+                <th>Siloscantidad</th>
+                <th>Silosobservaciones</th>
+                <th>Sembradoracantidad</th>
+                <th>Sembradoraobservaciones</th>
+                <th>Cosechadoracantidad</th>
+                <th>Cosechadoraobservaciones</th>
+                <th>Asperjadoracantidad</th>
+                <th>Asperjadoraobservaciones</th>
+                <th>Carretazorracantidad</th>
+                <th>Carretazorraobservaciones</th>
+                <th>Rotativacantidad</th>
+                <th>Rotativaobservaciones</th>
+                <th>Rolocantidad</th>
+                <th>Roloobservaciones</th>
+                <th>Aradocantidad</th>
+                <th>Aradoobservaciones</th>
+                <th>Surcadoracantidad</th>
+                <th>Surcadoraobservaciones</th>
+                <th>Abonadoracantidad</th>
+                <th>Abonadoraobservaciones</th>
+                <th>Embutidoracantidad</th>
+                <th>Embutidoraobservaciones</th>
+                <th>Vagonforrajerocantidad</th>
+                <th>Vagonforrajeroobservaciones</th>
+                <th>Bolsasensilarcantidad</th>
+                <th>Bolsasensilarobservaciones</th>
+                <th>Mecanicocantidad</th>
+                <th>Mecanicoobservaciones</th>
+                <th>Manualcantidad</th>
+                <th>Manualobservaciones</th>
+                <th>Tanquefriocantidad</th>
+                <th>Tanquefrioobservaciones</th>
+                <th>Cantarascantidad</th>
+                <th>Cantarasobservaciones</th>
+                <th>Filtrostelacantidad</th>
+                <th>Filtrostelaobservaciones</th>
+                <th>Paletascmtcantidad</th>
+                <th>Paletascmtobservaciones</th>
+                <th>Paletasfondonegrocantidad</th>
+                <th>Paletasfondonegroobservaciones</th>
+                <th>Reactivocmtcantidad</th>
+                <th>Reactivocmtobservaciones</th>
+                <th>Ordenotechocantidad</th>
+                <th>Ordenotechoobservaciones</th>
+                <th>Ordenopisocementocantidad</th>
+                <th>Ordenopisocementoobservaciones</th>
+                <th>Tanquenitrogenocantidad</th>
+                <th>Tanquenitrogenoobservaciones</th>
+                <th>Cajainseminacioncantidad</th>
+                <th>Cajainseminacionobservacion</th>
+                <th>Pistoletainseminacioncantidad</th>
+                <th>Pistoletainseminacionobservaciones</th>
+                <th>Termodescongelarpajuelascantidad</th>
+                <th>Termodescongelarpajuelasobservaciones</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for actividad in actividads %}
+            <tr>
+                <td><a href="{{ path('actividad_show', { 'id': actividad.id }) }}">{{ actividad.corralesCantidad }}</a></td>
+                <td>{{ actividad.corralesObservaciones }}</td>
+                <td>{{ actividad.mangaCantidad }}</td>
+                <td>{{ actividad.mangaObservaciones }}</td>
+                <td>{{ actividad.bretesCantidad }}</td>
+                <td>{{ actividad.bretesObservaciones }}</td>
+                <td>{{ actividad.romanaCantidad }}</td>
+                <td>{{ actividad.romanaObservaciones }}</td>
+                <td>{{ actividad.salaOrdenoCantidad }}</td>
+                <td>{{ actividad.salaOrdenoObservaciones }}</td>
+                <td>{{ actividad.bebederosCantidad }}</td>
+                <td>{{ actividad.bebederosObservaciones }}</td>
+                <td>{{ actividad.comederosCantidad }}</td>
+                <td>{{ actividad.comederosObservaciones }}</td>
+                <td>{{ actividad.cercoElectricoCantidad }}</td>
+                <td>{{ actividad.cercoElectricoObservaciones }}</td>
+                <td>{{ actividad.numPotrerosCantidad }}</td>
+                <td>{{ actividad.numPotrerosObservaciones }}</td>
+                <td>{{ actividad.hasXPotrerosCantidad }}</td>
+                <td>{{ actividad.hasXPotrerosObservaciones }}</td>
+                <td>{{ actividad.plantaElectricaCantidad }}</td>
+                <td>{{ actividad.plantaElectricaObservaciones }}</td>
+                <td>{{ actividad.tractores4x2Cantidad }}</td>
+                <td>{{ actividad.tractores4x2Observaciones }}</td>
+                <td>{{ actividad.tractores4x4Cantidad }}</td>
+                <td>{{ actividad.tractores4x4Observaciones }}</td>
+                <td>{{ actividad.galponesCantidad }}</td>
+                <td>{{ actividad.galponesObservaciones }}</td>
+                <td>{{ actividad.silosCantidad }}</td>
+                <td>{{ actividad.silosObservaciones }}</td>
+                <td>{{ actividad.sembradoraCantidad }}</td>
+                <td>{{ actividad.sembradoraObservaciones }}</td>
+                <td>{{ actividad.cosechadoraCantidad }}</td>
+                <td>{{ actividad.cosechadoraObservaciones }}</td>
+                <td>{{ actividad.asperjadoraCantidad }}</td>
+                <td>{{ actividad.asperjadoraObservaciones }}</td>
+                <td>{{ actividad.carretaZorraCantidad }}</td>
+                <td>{{ actividad.carretaZorraObservaciones }}</td>
+                <td>{{ actividad.rotativaCantidad }}</td>
+                <td>{{ actividad.rotativaObservaciones }}</td>
+                <td>{{ actividad.roloCantidad }}</td>
+                <td>{{ actividad.roloObservaciones }}</td>
+                <td>{{ actividad.aradoCantidad }}</td>
+                <td>{{ actividad.aradoObservaciones }}</td>
+                <td>{{ actividad.surcadoraCantidad }}</td>
+                <td>{{ actividad.surcadoraObservaciones }}</td>
+                <td>{{ actividad.abonadoraCantidad }}</td>
+                <td>{{ actividad.abonadoraObservaciones }}</td>
+                <td>{{ actividad.embutidoraCantidad }}</td>
+                <td>{{ actividad.embutidoraObservaciones }}</td>
+                <td>{{ actividad.vagonForrajeroCantidad }}</td>
+                <td>{{ actividad.vagonForrajeroObservaciones }}</td>
+                <td>{{ actividad.bolsasEnsilarCantidad }}</td>
+                <td>{{ actividad.bolsasEnsilarObservaciones }}</td>
+                <td>{{ actividad.mecanicoCantidad }}</td>
+                <td>{{ actividad.mecanicoObservaciones }}</td>
+                <td>{{ actividad.manualCantidad }}</td>
+                <td>{{ actividad.manualObservaciones }}</td>
+                <td>{{ actividad.tanqueFrioCantidad }}</td>
+                <td>{{ actividad.tanqueFrioObservaciones }}</td>
+                <td>{{ actividad.cantarasCantidad }}</td>
+                <td>{{ actividad.cantarasObservaciones }}</td>
+                <td>{{ actividad.filtrosTelaCantidad }}</td>
+                <td>{{ actividad.filtrosTelaObservaciones }}</td>
+                <td>{{ actividad.paletasCmtCantidad }}</td>
+                <td>{{ actividad.paletasCmtObservaciones }}</td>
+                <td>{{ actividad.paletasFondoNegroCantidad }}</td>
+                <td>{{ actividad.paletasFondoNegroObservaciones }}</td>
+                <td>{{ actividad.reactivoCmtCantidad }}</td>
+                <td>{{ actividad.reactivoCmtObservaciones }}</td>
+                <td>{{ actividad.ordenoTechoCantidad }}</td>
+                <td>{{ actividad.ordenoTechoObservaciones }}</td>
+                <td>{{ actividad.ordenoPisoCementoCantidad }}</td>
+                <td>{{ actividad.ordenoPisoCementoObservaciones }}</td>
+                <td>{{ actividad.tanqueNitrogenoCantidad }}</td>
+                <td>{{ actividad.tanqueNitrogenoObservaciones }}</td>
+                <td>{{ actividad.cajaInseminacionCantidad }}</td>
+                <td>{{ actividad.cajaInseminacionObservacion }}</td>
+                <td>{{ actividad.pistoletaInseminacionCantidad }}</td>
+                <td>{{ actividad.pistoletaInseminacionObservaciones }}</td>
+                <td>{{ actividad.termoDescongelarPajuelasCantidad }}</td>
+                <td>{{ actividad.termoDescongelarPajuelasObservaciones }}</td>
+                <td>{% if actividad.fecha %}{{ actividad.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ actividad.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('actividad_show', { 'id': actividad.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('actividad_edit', { 'id': actividad.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('actividad_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

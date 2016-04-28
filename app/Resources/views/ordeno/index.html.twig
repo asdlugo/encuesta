@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ordeno list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numvacasordenadas</th>
+                <th>Ltsleche</th>
+                <th>Numordenosaldia</th>
+                <th>Numautoconsumo</th>
+                <th>Numreceptoria</th>
+                <th>Numqueseras</th>
+                <th>Numquesofinca</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ordeno in ordenos %}
+            <tr>
+                <td><a href="{{ path('ordeno_show', { 'id': ordeno.id }) }}">{{ ordeno.numVacasOrdenadas }}</a></td>
+                <td>{{ ordeno.ltsLeche }}</td>
+                <td>{{ ordeno.numOrdenosAlDia }}</td>
+                <td>{{ ordeno.numAutoconsumo }}</td>
+                <td>{{ ordeno.numReceptoria }}</td>
+                <td>{{ ordeno.numQueseras }}</td>
+                <td>{{ ordeno.numQuesoFinca }}</td>
+                <td>{% if ordeno.fecha %}{{ ordeno.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ ordeno.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('ordeno_show', { 'id': ordeno.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('ordeno_edit', { 'id': ordeno.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ordeno_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

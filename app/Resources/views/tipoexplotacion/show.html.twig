@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>TipoExplotacion</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Numerovacabecerro</th>
+                <td>{{ tipoExplotacion.numeroVacaBecerro }}</td>
+            </tr>
+            <tr>
+                <th>Numerovacamaute</th>
+                <td>{{ tipoExplotacion.numeroVacaMaute }}</td>
+            </tr>
+            <tr>
+                <th>Numerovacanovillo</th>
+                <td>{{ tipoExplotacion.numeroVacaNovillo }}</td>
+            </tr>
+            <tr>
+                <th>Leche</th>
+                <td>{% if tipoExplotacion.leche %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Carne</th>
+                <td>{% if tipoExplotacion.carne %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Dobleproposito</th>
+                <td>{% if tipoExplotacion.dobleProposito %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Extensivo</th>
+                <td>{% if tipoExplotacion.extensivo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Intesivo</th>
+                <td>{% if tipoExplotacion.intesivo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Semiintensivo</th>
+                <td>{% if tipoExplotacion.semiIntensivo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if tipoExplotacion.fecha %}{{ tipoExplotacion.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ tipoExplotacion.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('tipoexplotacion_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('tipoexplotacion_edit', { 'id': tipoExplotacion.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

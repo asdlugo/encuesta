@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>RazaPredominante list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numcebu</th>
+                <th>Numcriollo</th>
+                <th>Numhulstein</th>
+                <th>Numpsuizo</th>
+                <th>Nummestizo</th>
+                <th>Numotro</th>
+                <th>Fecha</th>
+                <th>Numtoros</th>
+                <th>Numtorosreproductores</th>
+                <th>Numvacasproduccion</th>
+                <th>Numvacassecas</th>
+                <th>Numnovillos</th>
+                <th>Numnovillas</th>
+                <th>Nummautes</th>
+                <th>Nummautas</th>
+                <th>Numbecerros</th>
+                <th>Numbecerras</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for razaPredominante in razaPredominantes %}
+            <tr>
+                <td><a href="{{ path('razapredominante_show', { 'id': razaPredominante.id }) }}">{{ razaPredominante.numCebu }}</a></td>
+                <td>{{ razaPredominante.numCriollo }}</td>
+                <td>{{ razaPredominante.numHulstein }}</td>
+                <td>{{ razaPredominante.numPSuizo }}</td>
+                <td>{{ razaPredominante.numMestizo }}</td>
+                <td>{{ razaPredominante.numOtro }}</td>
+                <td>{% if razaPredominante.fecha %}{{ razaPredominante.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ razaPredominante.numToros }}</td>
+                <td>{{ razaPredominante.numTorosReproductores }}</td>
+                <td>{{ razaPredominante.numVacasProduccion }}</td>
+                <td>{{ razaPredominante.numVacasSecas }}</td>
+                <td>{{ razaPredominante.numNovillos }}</td>
+                <td>{{ razaPredominante.numNovillas }}</td>
+                <td>{{ razaPredominante.numMautes }}</td>
+                <td>{{ razaPredominante.numMautas }}</td>
+                <td>{{ razaPredominante.numBecerros }}</td>
+                <td>{{ razaPredominante.numBecerras }}</td>
+                <td>{{ razaPredominante.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('razapredominante_show', { 'id': razaPredominante.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('razapredominante_edit', { 'id': razaPredominante.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('razapredominante_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

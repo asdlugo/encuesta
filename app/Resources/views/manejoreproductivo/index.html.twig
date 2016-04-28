@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ManejoReproductivo list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tecnmontanat</th>
+                <th>Tecnmontacontrolada</th>
+                <th>Tecninseminacion</th>
+                <th>Tecntransfembriones</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for manejoReproductivo in manejoReproductivos %}
+            <tr>
+                <td><a href="{{ path('manejoreproductivo_show', { 'id': manejoReproductivo.id }) }}">{{ manejoReproductivo.tecnMontaNat }}</a></td>
+                <td>{% if manejoReproductivo.tecnMontaControlada %}Yes{% else %}No{% endif %}</td>
+                <td>{% if manejoReproductivo.tecnInseminacion %}Yes{% else %}No{% endif %}</td>
+                <td>{% if manejoReproductivo.tecnTransfEmbriones %}Yes{% else %}No{% endif %}</td>
+                <td>{% if manejoReproductivo.fecha %}{{ manejoReproductivo.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ manejoReproductivo.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('manejoreproductivo_show', { 'id': manejoReproductivo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('manejoreproductivo_edit', { 'id': manejoReproductivo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('manejoreproductivo_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

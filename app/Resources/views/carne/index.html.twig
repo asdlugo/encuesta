@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Carne list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numanimales</th>
+                <th>Pesopromventa</th>
+                <th>Edadparaventa</th>
+                <th>Fecha</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carne in carnes %}
+            <tr>
+                <td><a href="{{ path('carne_show', { 'id': carne.id }) }}">{{ carne.numAnimales }}</a></td>
+                <td>{{ carne.pesoPromVenta }}</td>
+                <td>{{ carne.edadParaVenta }}</td>
+                <td>{% if carne.fecha %}{{ carne.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ carne.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('carne_show', { 'id': carne.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('carne_edit', { 'id': carne.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('carne_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>SistemaRiego</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Riego</th>
+                <td>{% if sistemaRiego.riego %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tiporiegogravedad</th>
+                <td>{% if sistemaRiego.tiporiegoGravedad %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tiporiegoaspersion</th>
+                <td>{% if sistemaRiego.tiporiegoAspersion %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tiporiegomicroaspersion</th>
+                <td>{% if sistemaRiego.tiporiegoMicroaspersion %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tiporiegogoteo</th>
+                <td>{% if sistemaRiego.tiporiegoGoteo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tiporiegootro</th>
+                <td>{% if sistemaRiego.tiporiegoOtro %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Numsuperficie</th>
+                <td>{{ sistemaRiego.numSuperficie }}</td>
+            </tr>
+            <tr>
+                <th>Nummotobomba</th>
+                <td>{{ sistemaRiego.numMotobomba }}</td>
+            </tr>
+            <tr>
+                <th>Numcapacidadflujo</th>
+                <td>{{ sistemaRiego.numCapacidadFlujo }}</td>
+            </tr>
+            <tr>
+                <th>Condiciones</th>
+                <td>{{ sistemaRiego.condiciones }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if sistemaRiego.fecha %}{{ sistemaRiego.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ sistemaRiego.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sistemariego_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('sistemariego_edit', { 'id': sistemaRiego.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
