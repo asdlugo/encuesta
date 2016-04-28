@@ -1,3 +1,8 @@
+
+homepage:
+    pattern:   /
+    defaults:  { _controller: EncuestaBundle:SanidadAnimal:index}
+
 encuesta_sanidad_animal:
     resource: "@EncuestaBundle/Controller/SanidadAnimalController.php"
     type:     annotation
