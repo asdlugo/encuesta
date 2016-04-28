@@ -1,0 +1,617 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Actividad
+ *
+ * @ORM\Table(name="actividad", indexes={@ORM\Index(name="IDX_8DF2BD064ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class Actividad
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="corrales_cantidad", type="integer", nullable=true)
+     */
+    private $corralesCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="corrales_observaciones", type="text", nullable=true)
+     */
+    private $corralesObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="manga_cantidad", type="integer", nullable=true)
+     */
+    private $mangaCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="manga_observaciones", type="text", nullable=true)
+     */
+    private $mangaObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bretes_cantidad", type="integer", nullable=true)
+     */
+    private $bretesCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bretes_observaciones", type="text", nullable=true)
+     */
+    private $bretesObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="romana_cantidad", type="integer", nullable=true)
+     */
+    private $romanaCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="romana_observaciones", type="text", nullable=true)
+     */
+    private $romanaObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sala_ordeno_cantidad", type="integer", nullable=true)
+     */
+    private $salaOrdenoCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sala_ordeno_observaciones", type="text", nullable=true)
+     */
+    private $salaOrdenoObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bebederos_cantidad", type="integer", nullable=true)
+     */
+    private $bebederosCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bebederos_observaciones", type="text", nullable=true)
+     */
+    private $bebederosObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comederos_cantidad", type="integer", nullable=true)
+     */
+    private $comederosCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comederos_observaciones", type="text", nullable=true)
+     */
+    private $comederosObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cerco_electrico_cantidad", type="integer", nullable=true)
+     */
+    private $cercoElectricoCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cerco_electrico_observaciones", type="text", nullable=true)
+     */
+    private $cercoElectricoObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_potreros_cantidad", type="integer", nullable=true)
+     */
+    private $numPotrerosCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="num_potreros_observaciones", type="text", nullable=true)
+     */
+    private $numPotrerosObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="has_x_potreros_cantidad", type="integer", nullable=true)
+     */
+    private $hasXPotrerosCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="has_x_potreros_observaciones", type="text", nullable=true)
+     */
+    private $hasXPotrerosObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="planta_electrica_cantidad", type="integer", nullable=true)
+     */
+    private $plantaElectricaCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="planta_electrica_observaciones", type="text", nullable=true)
+     */
+    private $plantaElectricaObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tractores_4x2_cantidad", type="integer", nullable=true)
+     */
+    private $tractores4x2Cantidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tractores_4x2_observaciones", type="integer", nullable=true)
+     */
+    private $tractores4x2Observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tractores_4x4_cantidad", type="integer", nullable=true)
+     */
+    private $tractores4x4Cantidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tractores_4x4_observaciones", type="integer", nullable=true)
+     */
+    private $tractores4x4Observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="galpones_cantidad", type="integer", nullable=true)
+     */
+    private $galponesCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="galpones_observaciones", type="text", nullable=true)
+     */
+    private $galponesObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="silos_cantidad", type="integer", nullable=true)
+     */
+    private $silosCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="silos_observaciones", type="text", nullable=true)
+     */
+    private $silosObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sembradora_cantidad", type="integer", nullable=true)
+     */
+    private $sembradoraCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sembradora_observaciones", type="text", nullable=true)
+     */
+    private $sembradoraObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cosechadora_cantidad", type="integer", nullable=true)
+     */
+    private $cosechadoraCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cosechadora_observaciones", type="text", nullable=true)
+     */
+    private $cosechadoraObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="asperjadora_cantidad", type="integer", nullable=true)
+     */
+    private $asperjadoraCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="asperjadora_observaciones", type="text", nullable=true)
+     */
+    private $asperjadoraObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="carreta_zorra_cantidad", type="integer", nullable=true)
+     */
+    private $carretaZorraCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="carreta_zorra_observaciones", type="text", nullable=true)
+     */
+    private $carretaZorraObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rotativa_cantidad", type="integer", nullable=true)
+     */
+    private $rotativaCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rotativa_observaciones", type="text", nullable=true)
+     */
+    private $rotativaObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rolo_cantidad", type="integer", nullable=true)
+     */
+    private $roloCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rolo_observaciones", type="text", nullable=true)
+     */
+    private $roloObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arado_cantidad", type="integer", nullable=true)
+     */
+    private $aradoCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="arado_observaciones", type="text", nullable=true)
+     */
+    private $aradoObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="surcadora_cantidad", type="integer", nullable=true)
+     */
+    private $surcadoraCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="surcadora_observaciones", type="text", nullable=true)
+     */
+    private $surcadoraObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abonadora_cantidad", type="integer", nullable=true)
+     */
+    private $abonadoraCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="abonadora_observaciones", type="text", nullable=true)
+     */
+    private $abonadoraObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="embutidora_cantidad", type="integer", nullable=true)
+     */
+    private $embutidoraCantidad;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="embutidora_observaciones", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $embutidoraObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="vagon_forrajero_cantidad", type="integer", nullable=true)
+     */
+    private $vagonForrajeroCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="vagon_forrajero_observaciones", type="text", nullable=true)
+     */
+    private $vagonForrajeroObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bolsas_ensilar_cantidad", type="integer", nullable=true)
+     */
+    private $bolsasEnsilarCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bolsas_ensilar_observaciones", type="text", nullable=true)
+     */
+    private $bolsasEnsilarObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mecanico_cantidad", type="integer", nullable=true)
+     */
+    private $mecanicoCantidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mecanico_observaciones", type="integer", nullable=true)
+     */
+    private $mecanicoObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="manual_cantidad", type="integer", nullable=true)
+     */
+    private $manualCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="manual_observaciones", type="text", nullable=true)
+     */
+    private $manualObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tanque_frio_cantidad", type="integer", nullable=true)
+     */
+    private $tanqueFrioCantidad;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="tanque_frio_observaciones", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $tanqueFrioObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cantaras_cantidad", type="integer", nullable=true)
+     */
+    private $cantarasCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cantaras_observaciones", type="text", nullable=true)
+     */
+    private $cantarasObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="filtros_tela_cantidad", type="integer", nullable=true)
+     */
+    private $filtrosTelaCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="filtros_tela_observaciones", type="text", nullable=true)
+     */
+    private $filtrosTelaObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="paletas_cmt_cantidad", type="integer", nullable=true)
+     */
+    private $paletasCmtCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="paletas_cmt_observaciones", type="text", nullable=true)
+     */
+    private $paletasCmtObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="paletas_fondo_negro_cantidad", type="integer", nullable=true)
+     */
+    private $paletasFondoNegroCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="paletas_fondo_negro_observaciones", type="text", nullable=true)
+     */
+    private $paletasFondoNegroObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="reactivo_cmt_cantidad", type="integer", nullable=true)
+     */
+    private $reactivoCmtCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reactivo_cmt_observaciones", type="text", nullable=true)
+     */
+    private $reactivoCmtObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ordeno_techo_cantidad", type="integer", nullable=true)
+     */
+    private $ordenoTechoCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ordeno_techo_observaciones", type="text", nullable=true)
+     */
+    private $ordenoTechoObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ordeno_piso_cemento_cantidad", type="integer", nullable=true)
+     */
+    private $ordenoPisoCementoCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ordeno_piso_cemento_observaciones", type="text", nullable=true)
+     */
+    private $ordenoPisoCementoObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tanque_nitrogeno_cantidad", type="integer", nullable=true)
+     */
+    private $tanqueNitrogenoCantidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tanque_nitrogeno_observaciones", type="integer", nullable=true)
+     */
+    private $tanqueNitrogenoObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caja_inseminacion_cantidad", type="integer", nullable=true)
+     */
+    private $cajaInseminacionCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="caja_inseminacion_observacion", type="text", nullable=true)
+     */
+    private $cajaInseminacionObservacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pistoleta_inseminacion_cantidad", type="integer", nullable=true)
+     */
+    private $pistoletaInseminacionCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pistoleta_inseminacion_observaciones", type="text", nullable=true)
+     */
+    private $pistoletaInseminacionObservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="termo_descongelar_pajuelas_cantidad", type="integer", nullable=true)
+     */
+    private $termoDescongelarPajuelasCantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="termo_descongelar_pajuelas_observaciones", type="text", nullable=true)
+     */
+    private $termoDescongelarPajuelasObservaciones;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="actividad_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

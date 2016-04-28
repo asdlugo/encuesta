@@ -1,0 +1,113 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Registro
+ *
+ * @ORM\Table(name="registro", indexes={@ORM\Index(name="IDX_397CA85B4ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class Registro
+{
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="registro_parto", type="boolean", nullable=true)
+     */
+    private $registroParto;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="registro_secado", type="boolean", nullable=true)
+     */
+    private $registroSecado;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="peso_nacer", type="boolean", nullable=true)
+     */
+    private $pesoNacer;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="peso_destete", type="boolean", nullable=true)
+     */
+    private $pesoDestete;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="peso_ano", type="boolean", nullable=true)
+     */
+    private $pesoAno;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="pasaje_leche", type="boolean", nullable=true)
+     */
+    private $pasajeLeche;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="text", nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mensual", type="integer", nullable=true)
+     */
+    private $mensual;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="semanal", type="integer", nullable=true)
+     */
+    private $semanal;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="diario", type="integer", nullable=true)
+     */
+    private $diario;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="registro_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

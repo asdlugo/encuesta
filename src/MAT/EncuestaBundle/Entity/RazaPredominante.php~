@@ -1,0 +1,155 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * RazaPredominante
+ *
+ * @ORM\Table(name="raza_predominante", indexes={@ORM\Index(name="IDX_597BBA014ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class RazaPredominante
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_cebu", type="integer", nullable=true)
+     */
+    private $numCebu;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_criollo", type="integer", nullable=true)
+     */
+    private $numCriollo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_hulstein", type="integer", nullable=true)
+     */
+    private $numHulstein;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_p_suizo", type="integer", nullable=true)
+     */
+    private $numPSuizo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_mestizo", type="integer", nullable=true)
+     */
+    private $numMestizo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_otro", type="integer", nullable=true)
+     */
+    private $numOtro;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_toros", type="integer", nullable=true)
+     */
+    private $numToros;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_toros_reproductores", type="integer", nullable=true)
+     */
+    private $numTorosReproductores;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_vacas_produccion", type="integer", nullable=true)
+     */
+    private $numVacasProduccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_vacas_secas", type="integer", nullable=true)
+     */
+    private $numVacasSecas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_novillos", type="integer", nullable=true)
+     */
+    private $numNovillos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_novillas", type="integer", nullable=true)
+     */
+    private $numNovillas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_mautes", type="integer", nullable=true)
+     */
+    private $numMautes;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_mautas", type="integer", nullable=true)
+     */
+    private $numMautas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_becerros", type="integer", nullable=true)
+     */
+    private $numBecerros;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_becerras", type="integer", nullable=true)
+     */
+    private $numBecerras;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="raza_predominante_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

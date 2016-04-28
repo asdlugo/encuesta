@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\Alimentacion" table="alimentacion">
+    <indexes>
+      <index name="IDX_43ABB0864ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="pastoCorteTipo1" type="string" column="pasto_corte_tipo1" nullable="true"/>
+    <field name="pastoCorteHectarias1" type="float" column="pasto_corte_hectarias1" precision="10" scale="0" nullable="true"/>
+    <field name="pastoCorteTipo2" type="string" column="pasto_corte_tipo2" nullable="true"/>
+    <field name="pastoCorteHectareas2" type="float" column="pasto_corte_hectareas2" precision="10" scale="0" nullable="true"/>
+    <field name="brachariaTipo" type="boolean" column="bracharia_tipo" nullable="true"/>
+    <field name="brachariaHectareas" type="float" column="bracharia_hectareas" precision="10" scale="0" nullable="true"/>
+    <field name="estrellaTipo" type="boolean" column="estrella_tipo" nullable="true"/>
+    <field name="estrellaHectareas" type="float" column="estrella_hectareas" precision="10" scale="0" nullable="true"/>
+    <field name="guineaTipo" type="boolean" column="guinea_tipo" nullable="true"/>
+    <field name="guineaHectareas" type="float" column="guinea_hectareas" precision="10" scale="0" nullable="true"/>
+    <field name="alemanTipo" type="boolean" column="aleman_tipo" nullable="true"/>
+    <field name="alemanHectareas" type="float" column="aleman_hectareas" precision="10" scale="0" nullable="true"/>
+    <field name="canaAzucarTipo" type="string" column="cana_azucar_tipo" nullable="true"/>
+    <field name="canaAzucarHectareas" type="float" column="cana_azucar_hectareas" precision="10" scale="0" nullable="true"/>
+    <field name="numPotrerosTipo" type="integer" column="num_potreros_tipo" nullable="true"/>
+    <field name="numPotrerosAreaPromedio" type="float" column="num_potreros_area_promedio" precision="10" scale="0" nullable="true"/>
+    <field name="silos" type="float" column="silos" precision="10" scale="0" nullable="true"/>
+    <field name="silosCultivo" type="string" column="silos_cultivo" nullable="true"/>
+    <field name="toneladasSilosCosechadas" type="float" column="toneladas_silos_cosechadas" precision="10" scale="0" nullable="true"/>
+    <field name="toneladasSilosCosechadasObsv" type="text" column="toneladas_silos_cosechadas_obsv" nullable="true"/>
+    <field name="suministraMinerales" type="boolean" column="suministra_minerales" nullable="true"/>
+    <field name="suministraMineralesKgsDias" type="string" column="suministra_minerales_kgs-dias" nullable="true"/>
+    <field name="suministraConcentrado" type="boolean" column="suministra_concentrado" nullable="true"/>
+    <field name="suministraConcentradoKgsDias" type="string" column="suministra_concentrado_kgs-dias" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\SanidadAnimal" table="sanidad_animal">
+    <indexes>
+      <index name="IDX_B76B7F674ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="recibeAsistencia" type="boolean" column="recibe_asistencia" nullable="true"/>
+    <field name="asistenciaPersona" type="string" column="asistencia_persona" length="30" nullable="true"/>
+    <field name="aftosaFecha" type="date" column="aftosa_fecha" nullable="true"/>
+    <field name="rabiaFecha" type="date" column="rabia_fecha" nullable="true"/>
+    <field name="leptospiraFecha" type="date" column="leptospira_fecha" nullable="true"/>
+    <field name="viralesFecha" type="date" column="virales_fecha" nullable="true"/>
+    <field name="clostridialesFecha" type="date" column="clostridiales_fecha" nullable="true"/>
+    <field name="brucellaFecha" type="date" column="brucella_fecha" nullable="true"/>
+    <field name="tripleFecha" type="date" column="triple_fecha" nullable="true"/>
+    <field name="otraFecha" type="date" column="otra_fecha" nullable="true"/>
+    <field name="otraDescripcion" type="string" column="otra_descripcion" length="30" nullable="true"/>
+    <field name="endoparasitosTipo" type="string" column="endoparasitos_tipo" length="30" nullable="true"/>
+    <field name="endoparasitosFrecuencia" type="integer" column="endoparasitos_frecuencia" nullable="true"/>
+    <field name="ectoparasitosTipo" type="string" column="ectoparasitos_tipo" length="30" nullable="true"/>
+    <field name="ectoparasitosFrecuencia" type="integer" column="ectoparasitos_frecuencia" nullable="true"/>
+    <field name="pruebaBrucella" type="date" column="prueba_brucella" nullable="true"/>
+    <field name="pruebaLeptospira" type="date" column="prueba_leptospira" nullable="true"/>
+    <field name="pruebaOtra" type="date" column="prueba_otra" nullable="true"/>
+    <field name="pruebaOtraDescripcion" type="string" column="prueba_otra_descripcion" length="30" nullable="true"/>
+    <field name="secadoVacaNatural" type="boolean" column="secado_vaca_natural" nullable="true"/>
+    <field name="secadoVacaInducido" type="boolean" column="secado_vaca_inducido" nullable="true"/>
+    <field name="secadoVacaProducto" type="string" column="secado_vaca_producto" length="30" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

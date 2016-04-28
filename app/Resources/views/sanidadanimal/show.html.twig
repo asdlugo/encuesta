@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>SanidadAnimal</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Recibeasistencia</th>
+                <td>{% if sanidadAnimal.recibeAsistencia %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Asistenciapersona</th>
+                <td>{{ sanidadAnimal.asistenciaPersona }}</td>
+            </tr>
+            <tr>
+                <th>Aftosafecha</th>
+                <td>{% if sanidadAnimal.aftosaFecha %}{{ sanidadAnimal.aftosaFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Rabiafecha</th>
+                <td>{% if sanidadAnimal.rabiaFecha %}{{ sanidadAnimal.rabiaFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Leptospirafecha</th>
+                <td>{% if sanidadAnimal.leptospiraFecha %}{{ sanidadAnimal.leptospiraFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Viralesfecha</th>
+                <td>{% if sanidadAnimal.viralesFecha %}{{ sanidadAnimal.viralesFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Clostridialesfecha</th>
+                <td>{% if sanidadAnimal.clostridialesFecha %}{{ sanidadAnimal.clostridialesFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Brucellafecha</th>
+                <td>{% if sanidadAnimal.brucellaFecha %}{{ sanidadAnimal.brucellaFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Triplefecha</th>
+                <td>{% if sanidadAnimal.tripleFecha %}{{ sanidadAnimal.tripleFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Otrafecha</th>
+                <td>{% if sanidadAnimal.otraFecha %}{{ sanidadAnimal.otraFecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Otradescripcion</th>
+                <td>{{ sanidadAnimal.otraDescripcion }}</td>
+            </tr>
+            <tr>
+                <th>Endoparasitostipo</th>
+                <td>{{ sanidadAnimal.endoparasitosTipo }}</td>
+            </tr>
+            <tr>
+                <th>Endoparasitosfrecuencia</th>
+                <td>{{ sanidadAnimal.endoparasitosFrecuencia }}</td>
+            </tr>
+            <tr>
+                <th>Ectoparasitostipo</th>
+                <td>{{ sanidadAnimal.ectoparasitosTipo }}</td>
+            </tr>
+            <tr>
+                <th>Ectoparasitosfrecuencia</th>
+                <td>{{ sanidadAnimal.ectoparasitosFrecuencia }}</td>
+            </tr>
+            <tr>
+                <th>Pruebabrucella</th>
+                <td>{% if sanidadAnimal.pruebaBrucella %}{{ sanidadAnimal.pruebaBrucella|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pruebaleptospira</th>
+                <td>{% if sanidadAnimal.pruebaLeptospira %}{{ sanidadAnimal.pruebaLeptospira|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pruebaotra</th>
+                <td>{% if sanidadAnimal.pruebaOtra %}{{ sanidadAnimal.pruebaOtra|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pruebaotradescripcion</th>
+                <td>{{ sanidadAnimal.pruebaOtraDescripcion }}</td>
+            </tr>
+            <tr>
+                <th>Secadovacanatural</th>
+                <td>{% if sanidadAnimal.secadoVacaNatural %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Secadovacainducido</th>
+                <td>{% if sanidadAnimal.secadoVacaInducido %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Secadovacaproducto</th>
+                <td>{{ sanidadAnimal.secadoVacaProducto }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{% if sanidadAnimal.fecha %}{{ sanidadAnimal.fecha|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ sanidadAnimal.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sanidadanimal_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('sanidadanimal_edit', { 'id': sanidadAnimal.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

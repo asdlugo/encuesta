@@ -1,0 +1,78 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Superficie
+ *
+ * @ORM\Table(name="superficie", indexes={@ORM\Index(name="IDX_E4DE844B4ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class Superficie
+{
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="superficie_riego", type="string", nullable=true)
+     */
+    private $superficieRiego;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="superficie_aprovechable", type="string", nullable=true)
+     */
+    private $superficieAprovechable;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="superficie_no_aprovechable", type="string", nullable=true)
+     */
+    private $superficieNoAprovechable;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="superficie_produccion", type="string", nullable=true)
+     */
+    private $superficieProduccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="superficie_sembrada", type="string", nullable=true)
+     */
+    private $superficieSembrada;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="superficie_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

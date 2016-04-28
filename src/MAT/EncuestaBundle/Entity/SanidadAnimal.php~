@@ -1,0 +1,197 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SanidadAnimal
+ *
+ * @ORM\Table(name="sanidad_animal", indexes={@ORM\Index(name="IDX_B76B7F674ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class SanidadAnimal
+{
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="recibe_asistencia", type="boolean", nullable=true)
+     */
+    private $recibeAsistencia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="asistencia_persona", type="string", length=30, nullable=true)
+     */
+    private $asistenciaPersona;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="aftosa_fecha", type="date", nullable=true)
+     */
+    private $aftosaFecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="rabia_fecha", type="date", nullable=true)
+     */
+    private $rabiaFecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="leptospira_fecha", type="date", nullable=true)
+     */
+    private $leptospiraFecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="virales_fecha", type="date", nullable=true)
+     */
+    private $viralesFecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="clostridiales_fecha", type="date", nullable=true)
+     */
+    private $clostridialesFecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="brucella_fecha", type="date", nullable=true)
+     */
+    private $brucellaFecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="triple_fecha", type="date", nullable=true)
+     */
+    private $tripleFecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="otra_fecha", type="date", nullable=true)
+     */
+    private $otraFecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="otra_descripcion", type="string", length=30, nullable=true)
+     */
+    private $otraDescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="endoparasitos_tipo", type="string", length=30, nullable=true)
+     */
+    private $endoparasitosTipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="endoparasitos_frecuencia", type="integer", nullable=true)
+     */
+    private $endoparasitosFrecuencia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ectoparasitos_tipo", type="string", length=30, nullable=true)
+     */
+    private $ectoparasitosTipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ectoparasitos_frecuencia", type="integer", nullable=true)
+     */
+    private $ectoparasitosFrecuencia;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="prueba_brucella", type="date", nullable=true)
+     */
+    private $pruebaBrucella;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="prueba_leptospira", type="date", nullable=true)
+     */
+    private $pruebaLeptospira;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="prueba_otra", type="date", nullable=true)
+     */
+    private $pruebaOtra;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prueba_otra_descripcion", type="string", length=30, nullable=true)
+     */
+    private $pruebaOtraDescripcion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="secado_vaca_natural", type="boolean", nullable=true)
+     */
+    private $secadoVacaNatural;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="secado_vaca_inducido", type="boolean", nullable=true)
+     */
+    private $secadoVacaInducido;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="secado_vaca_producto", type="string", length=30, nullable=true)
+     */
+    private $secadoVacaProducto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="sanidad_animal_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

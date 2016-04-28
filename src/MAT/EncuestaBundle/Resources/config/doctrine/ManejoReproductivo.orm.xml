@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\ManejoReproductivo" table="manejo_reproductivo">
+    <indexes>
+      <index name="IDX_1BFFC6B34ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="tecnMontaNat" type="boolean" column="tecn_monta_nat" nullable="true"/>
+    <field name="tecnMontaControlada" type="boolean" column="tecn_monta_controlada" nullable="true"/>
+    <field name="tecnInseminacion" type="boolean" column="tecn_inseminacion" nullable="true"/>
+    <field name="tecnTransfEmbriones" type="boolean" column="tecn_transf_embriones" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Carne">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

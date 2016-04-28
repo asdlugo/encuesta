@@ -1,0 +1,71 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ManejoReproductivo
+ *
+ * @ORM\Table(name="manejo_reproductivo", indexes={@ORM\Index(name="IDX_1BFFC6B34ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class ManejoReproductivo
+{
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tecn_monta_nat", type="boolean", nullable=true)
+     */
+    private $tecnMontaNat;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tecn_monta_controlada", type="boolean", nullable=true)
+     */
+    private $tecnMontaControlada;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tecn_inseminacion", type="boolean", nullable=true)
+     */
+    private $tecnInseminacion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tecn_transf_embriones", type="boolean", nullable=true)
+     */
+    private $tecnTransfEmbriones;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="manejo_reproductivo_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Carne
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Carne")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

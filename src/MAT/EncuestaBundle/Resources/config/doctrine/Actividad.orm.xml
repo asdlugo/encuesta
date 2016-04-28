@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\Actividad" table="actividad">
+    <indexes>
+      <index name="IDX_8DF2BD064ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="corralesCantidad" type="integer" column="corrales_cantidad" nullable="true"/>
+    <field name="corralesObservaciones" type="text" column="corrales_observaciones" nullable="true"/>
+    <field name="mangaCantidad" type="integer" column="manga_cantidad" nullable="true"/>
+    <field name="mangaObservaciones" type="text" column="manga_observaciones" nullable="true"/>
+    <field name="bretesCantidad" type="integer" column="bretes_cantidad" nullable="true"/>
+    <field name="bretesObservaciones" type="text" column="bretes_observaciones" nullable="true"/>
+    <field name="romanaCantidad" type="integer" column="romana_cantidad" nullable="true"/>
+    <field name="romanaObservaciones" type="text" column="romana_observaciones" nullable="true"/>
+    <field name="salaOrdenoCantidad" type="integer" column="sala_ordeno_cantidad" nullable="true"/>
+    <field name="salaOrdenoObservaciones" type="text" column="sala_ordeno_observaciones" nullable="true"/>
+    <field name="bebederosCantidad" type="integer" column="bebederos_cantidad" nullable="true"/>
+    <field name="bebederosObservaciones" type="text" column="bebederos_observaciones" nullable="true"/>
+    <field name="comederosCantidad" type="integer" column="comederos_cantidad" nullable="true"/>
+    <field name="comederosObservaciones" type="text" column="comederos_observaciones" nullable="true"/>
+    <field name="cercoElectricoCantidad" type="integer" column="cerco_electrico_cantidad" nullable="true"/>
+    <field name="cercoElectricoObservaciones" type="text" column="cerco_electrico_observaciones" nullable="true"/>
+    <field name="numPotrerosCantidad" type="integer" column="num_potreros_cantidad" nullable="true"/>
+    <field name="numPotrerosObservaciones" type="text" column="num_potreros_observaciones" nullable="true"/>
+    <field name="hasXPotrerosCantidad" type="integer" column="has_x_potreros_cantidad" nullable="true"/>
+    <field name="hasXPotrerosObservaciones" type="text" column="has_x_potreros_observaciones" nullable="true"/>
+    <field name="plantaElectricaCantidad" type="integer" column="planta_electrica_cantidad" nullable="true"/>
+    <field name="plantaElectricaObservaciones" type="text" column="planta_electrica_observaciones" nullable="true"/>
+    <field name="tractores4x2Cantidad" type="integer" column="tractores_4x2_cantidad" nullable="true"/>
+    <field name="tractores4x2Observaciones" type="integer" column="tractores_4x2_observaciones" nullable="true"/>
+    <field name="tractores4x4Cantidad" type="integer" column="tractores_4x4_cantidad" nullable="true"/>
+    <field name="tractores4x4Observaciones" type="integer" column="tractores_4x4_observaciones" nullable="true"/>
+    <field name="galponesCantidad" type="integer" column="galpones_cantidad" nullable="true"/>
+    <field name="galponesObservaciones" type="text" column="galpones_observaciones" nullable="true"/>
+    <field name="silosCantidad" type="integer" column="silos_cantidad" nullable="true"/>
+    <field name="silosObservaciones" type="text" column="silos_observaciones" nullable="true"/>
+    <field name="sembradoraCantidad" type="integer" column="sembradora_cantidad" nullable="true"/>
+    <field name="sembradoraObservaciones" type="text" column="sembradora_observaciones" nullable="true"/>
+    <field name="cosechadoraCantidad" type="integer" column="cosechadora_cantidad" nullable="true"/>
+    <field name="cosechadoraObservaciones" type="text" column="cosechadora_observaciones" nullable="true"/>
+    <field name="asperjadoraCantidad" type="integer" column="asperjadora_cantidad" nullable="true"/>
+    <field name="asperjadoraObservaciones" type="text" column="asperjadora_observaciones" nullable="true"/>
+    <field name="carretaZorraCantidad" type="integer" column="carreta_zorra_cantidad" nullable="true"/>
+    <field name="carretaZorraObservaciones" type="text" column="carreta_zorra_observaciones" nullable="true"/>
+    <field name="rotativaCantidad" type="integer" column="rotativa_cantidad" nullable="true"/>
+    <field name="rotativaObservaciones" type="text" column="rotativa_observaciones" nullable="true"/>
+    <field name="roloCantidad" type="integer" column="rolo_cantidad" nullable="true"/>
+    <field name="roloObservaciones" type="text" column="rolo_observaciones" nullable="true"/>
+    <field name="aradoCantidad" type="integer" column="arado_cantidad" nullable="true"/>
+    <field name="aradoObservaciones" type="text" column="arado_observaciones" nullable="true"/>
+    <field name="surcadoraCantidad" type="integer" column="surcadora_cantidad" nullable="true"/>
+    <field name="surcadoraObservaciones" type="text" column="surcadora_observaciones" nullable="true"/>
+    <field name="abonadoraCantidad" type="integer" column="abonadora_cantidad" nullable="true"/>
+    <field name="abonadoraObservaciones" type="text" column="abonadora_observaciones" nullable="true"/>
+    <field name="embutidoraCantidad" type="integer" column="embutidora_cantidad" nullable="true"/>
+    <field name="embutidoraObservaciones" type="float" column="embutidora_observaciones" precision="10" scale="0" nullable="true"/>
+    <field name="vagonForrajeroCantidad" type="integer" column="vagon_forrajero_cantidad" nullable="true"/>
+    <field name="vagonForrajeroObservaciones" type="text" column="vagon_forrajero_observaciones" nullable="true"/>
+    <field name="bolsasEnsilarCantidad" type="integer" column="bolsas_ensilar_cantidad" nullable="true"/>
+    <field name="bolsasEnsilarObservaciones" type="text" column="bolsas_ensilar_observaciones" nullable="true"/>
+    <field name="mecanicoCantidad" type="integer" column="mecanico_cantidad" nullable="true"/>
+    <field name="mecanicoObservaciones" type="integer" column="mecanico_observaciones" nullable="true"/>
+    <field name="manualCantidad" type="integer" column="manual_cantidad" nullable="true"/>
+    <field name="manualObservaciones" type="text" column="manual_observaciones" nullable="true"/>
+    <field name="tanqueFrioCantidad" type="integer" column="tanque_frio_cantidad" nullable="true"/>
+    <field name="tanqueFrioObservaciones" type="float" column="tanque_frio_observaciones" precision="10" scale="0" nullable="true"/>
+    <field name="cantarasCantidad" type="integer" column="cantaras_cantidad" nullable="true"/>
+    <field name="cantarasObservaciones" type="text" column="cantaras_observaciones" nullable="true"/>
+    <field name="filtrosTelaCantidad" type="integer" column="filtros_tela_cantidad" nullable="true"/>
+    <field name="filtrosTelaObservaciones" type="text" column="filtros_tela_observaciones" nullable="true"/>
+    <field name="paletasCmtCantidad" type="integer" column="paletas_cmt_cantidad" nullable="true"/>
+    <field name="paletasCmtObservaciones" type="text" column="paletas_cmt_observaciones" nullable="true"/>
+    <field name="paletasFondoNegroCantidad" type="integer" column="paletas_fondo_negro_cantidad" nullable="true"/>
+    <field name="paletasFondoNegroObservaciones" type="text" column="paletas_fondo_negro_observaciones" nullable="true"/>
+    <field name="reactivoCmtCantidad" type="integer" column="reactivo_cmt_cantidad" nullable="true"/>
+    <field name="reactivoCmtObservaciones" type="text" column="reactivo_cmt_observaciones" nullable="true"/>
+    <field name="ordenoTechoCantidad" type="integer" column="ordeno_techo_cantidad" nullable="true"/>
+    <field name="ordenoTechoObservaciones" type="text" column="ordeno_techo_observaciones" nullable="true"/>
+    <field name="ordenoPisoCementoCantidad" type="integer" column="ordeno_piso_cemento_cantidad" nullable="true"/>
+    <field name="ordenoPisoCementoObservaciones" type="text" column="ordeno_piso_cemento_observaciones" nullable="true"/>
+    <field name="tanqueNitrogenoCantidad" type="integer" column="tanque_nitrogeno_cantidad" nullable="true"/>
+    <field name="tanqueNitrogenoObservaciones" type="integer" column="tanque_nitrogeno_observaciones" nullable="true"/>
+    <field name="cajaInseminacionCantidad" type="integer" column="caja_inseminacion_cantidad" nullable="true"/>
+    <field name="cajaInseminacionObservacion" type="text" column="caja_inseminacion_observacion" nullable="true"/>
+    <field name="pistoletaInseminacionCantidad" type="integer" column="pistoleta_inseminacion_cantidad" nullable="true"/>
+    <field name="pistoletaInseminacionObservaciones" type="text" column="pistoleta_inseminacion_observaciones" nullable="true"/>
+    <field name="termoDescongelarPajuelasCantidad" type="integer" column="termo_descongelar_pajuelas_cantidad" nullable="true"/>
+    <field name="termoDescongelarPajuelasObservaciones" type="text" column="termo_descongelar_pajuelas_observaciones" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

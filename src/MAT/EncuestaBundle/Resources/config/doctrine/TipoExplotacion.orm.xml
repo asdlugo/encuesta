@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\TipoExplotacion" table="tipo_explotacion">
+    <indexes>
+      <index name="IDX_82BCA8704ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="numeroVacaBecerro" type="integer" column="numero_vaca_becerro" nullable="true"/>
+    <field name="numeroVacaMaute" type="integer" column="numero_vaca_maute" nullable="true"/>
+    <field name="numeroVacaNovillo" type="integer" column="numero_vaca_novillo" nullable="true"/>
+    <field name="leche" type="boolean" column="leche" nullable="true"/>
+    <field name="carne" type="boolean" column="carne" nullable="true"/>
+    <field name="dobleProposito" type="boolean" column="doble_proposito" nullable="true"/>
+    <field name="extensivo" type="boolean" column="extensivo" nullable="true"/>
+    <field name="intesivo" type="boolean" column="intesivo" nullable="true"/>
+    <field name="semiIntensivo" type="boolean" column="semi_intensivo" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

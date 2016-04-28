@@ -1,0 +1,113 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SistemaRiego
+ *
+ * @ORM\Table(name="sistema_riego", indexes={@ORM\Index(name="IDX_D4411EF74ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class SistemaRiego
+{
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="riego", type="boolean", nullable=true)
+     */
+    private $riego;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tiporiego_gravedad", type="boolean", nullable=true)
+     */
+    private $tiporiegoGravedad;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tiporiego_aspersion", type="boolean", nullable=true)
+     */
+    private $tiporiegoAspersion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tiporiego_microaspersion", type="boolean", nullable=true)
+     */
+    private $tiporiegoMicroaspersion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tiporiego_goteo", type="boolean", nullable=true)
+     */
+    private $tiporiegoGoteo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tiporiego_otro", type="boolean", nullable=true)
+     */
+    private $tiporiegoOtro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_superficie", type="integer", nullable=true)
+     */
+    private $numSuperficie;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_motobomba", type="integer", nullable=true)
+     */
+    private $numMotobomba;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_capacidad_flujo", type="integer", nullable=true)
+     */
+    private $numCapacidadFlujo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="condiciones", type="string", nullable=true)
+     */
+    private $condiciones;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="sistema_riego_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Carne
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Carne")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

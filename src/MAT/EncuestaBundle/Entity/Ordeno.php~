@@ -1,0 +1,92 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ordeno
+ *
+ * @ORM\Table(name="ordeno", indexes={@ORM\Index(name="IDX_1759FCFC4ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class Ordeno
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_vacas_ordenadas", type="integer", nullable=true)
+     */
+    private $numVacasOrdenadas;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="lts_leche", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $ltsLeche;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_ordenos_al_dia", type="integer", nullable=true)
+     */
+    private $numOrdenosAlDia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_autoconsumo", type="integer", nullable=true)
+     */
+    private $numAutoconsumo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_receptoria", type="integer", nullable=true)
+     */
+    private $numReceptoria;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_queseras", type="integer", nullable=true)
+     */
+    private $numQueseras;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_queso_finca", type="integer", nullable=true)
+     */
+    private $numQuesoFinca;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="ordeno_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

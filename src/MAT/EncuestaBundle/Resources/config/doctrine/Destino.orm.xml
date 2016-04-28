@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\Destino" table="destino">
+    <indexes>
+      <index name="IDX_81F64EFA4ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="numAutoconsumo" type="integer" column="num_autoconsumo" nullable="true"/>
+    <field name="numCria" type="integer" column="num_cria" nullable="true"/>
+    <field name="numLevante" type="integer" column="num_levante" nullable="true"/>
+    <field name="numCeba" type="integer" column="num_ceba" nullable="true"/>
+    <field name="numReproduccion" type="integer" column="num_reproduccion" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

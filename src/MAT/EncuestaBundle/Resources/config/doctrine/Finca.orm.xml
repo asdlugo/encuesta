@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\Finca" table="finca">
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="ubicacion" type="text" column="ubicacion" nullable="true"/>
+    <field name="idParroquia" type="bigint" column="id_parroquia" nullable="true"/>
+    <field name="idSector" type="bigint" column="id_sector" nullable="true"/>
+    <field name="idCaserio" type="bigint" column="id_caserio" nullable="true"/>
+    <field name="gpsUtmNorte" type="string" column="gps_utm_norte" nullable="true"/>
+    <field name="gpsUtmEste" type="string" column="gps_utm_este" nullable="true"/>
+    <field name="idCondicionVia" type="bigint" column="id_condicion_via" nullable="true"/>
+    <field name="documentoInti" type="string" column="documento_inti" nullable="true"/>
+    <field name="hierroInsai" type="string" column="hierro_insai" nullable="true"/>
+  </entity>
+</doctrine-mapping>

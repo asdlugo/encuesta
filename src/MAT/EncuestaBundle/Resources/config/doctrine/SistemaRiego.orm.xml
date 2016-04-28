@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\SistemaRiego" table="sistema_riego">
+    <indexes>
+      <index name="IDX_D4411EF74ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="riego" type="boolean" column="riego" nullable="true"/>
+    <field name="tiporiegoGravedad" type="boolean" column="tiporiego_gravedad" nullable="true"/>
+    <field name="tiporiegoAspersion" type="boolean" column="tiporiego_aspersion" nullable="true"/>
+    <field name="tiporiegoMicroaspersion" type="boolean" column="tiporiego_microaspersion" nullable="true"/>
+    <field name="tiporiegoGoteo" type="boolean" column="tiporiego_goteo" nullable="true"/>
+    <field name="tiporiegoOtro" type="boolean" column="tiporiego_otro" nullable="true"/>
+    <field name="numSuperficie" type="integer" column="num_superficie" nullable="true"/>
+    <field name="numMotobomba" type="integer" column="num_motobomba" nullable="true"/>
+    <field name="numCapacidadFlujo" type="integer" column="num_capacidad_flujo" nullable="true"/>
+    <field name="condiciones" type="string" column="condiciones" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Carne">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

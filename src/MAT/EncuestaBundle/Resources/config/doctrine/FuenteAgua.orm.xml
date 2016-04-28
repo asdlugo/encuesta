@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\FuenteAgua" table="fuente_agua">
+    <indexes>
+      <index name="IDX_4CB1765C4ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="pozo" type="boolean" column="pozo" nullable="true"/>
+    <field name="represa" type="boolean" column="represa" nullable="true"/>
+    <field name="acueducto" type="boolean" column="acueducto" nullable="true"/>
+    <field name="laguna" type="boolean" column="laguna" nullable="true"/>
+    <field name="rioQuebrada" type="boolean" column="rio_quebrada" nullable="true"/>
+    <field name="manantial" type="boolean" column="manantial" nullable="true"/>
+    <field name="publico" type="boolean" column="publico" nullable="true"/>
+    <field name="privado" type="boolean" column="privado" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Carne">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

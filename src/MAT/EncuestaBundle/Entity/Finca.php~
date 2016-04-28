@@ -1,0 +1,89 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Finca
+ *
+ * @ORM\Table(name="finca")
+ * @ORM\Entity
+ */
+class Finca
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ubicacion", type="text", nullable=true)
+     */
+    private $ubicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_parroquia", type="bigint", nullable=true)
+     */
+    private $idParroquia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_sector", type="bigint", nullable=true)
+     */
+    private $idSector;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_caserio", type="bigint", nullable=true)
+     */
+    private $idCaserio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gps_utm_norte", type="string", nullable=true)
+     */
+    private $gpsUtmNorte;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gps_utm_este", type="string", nullable=true)
+     */
+    private $gpsUtmEste;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_condicion_via", type="bigint", nullable=true)
+     */
+    private $idCondicionVia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="documento_inti", type="string", nullable=true)
+     */
+    private $documentoInti;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="hierro_insai", type="string", nullable=true)
+     */
+    private $hierroInsai;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="finca_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+
+}

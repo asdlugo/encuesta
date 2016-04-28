@@ -1,0 +1,211 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Alimentacion
+ *
+ * @ORM\Table(name="alimentacion", indexes={@ORM\Index(name="IDX_43ABB0864ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class Alimentacion
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pasto_corte_tipo1", type="string", nullable=true)
+     */
+    private $pastoCorteTipo1;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="pasto_corte_hectarias1", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $pastoCorteHectarias1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pasto_corte_tipo2", type="string", nullable=true)
+     */
+    private $pastoCorteTipo2;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="pasto_corte_hectareas2", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $pastoCorteHectareas2;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="bracharia_tipo", type="boolean", nullable=true)
+     */
+    private $brachariaTipo;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="bracharia_hectareas", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $brachariaHectareas;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="estrella_tipo", type="boolean", nullable=true)
+     */
+    private $estrellaTipo;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="estrella_hectareas", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $estrellaHectareas;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="guinea_tipo", type="boolean", nullable=true)
+     */
+    private $guineaTipo;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="guinea_hectareas", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $guineaHectareas;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="aleman_tipo", type="boolean", nullable=true)
+     */
+    private $alemanTipo;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="aleman_hectareas", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $alemanHectareas;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cana_azucar_tipo", type="string", nullable=true)
+     */
+    private $canaAzucarTipo;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="cana_azucar_hectareas", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $canaAzucarHectareas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_potreros_tipo", type="integer", nullable=true)
+     */
+    private $numPotrerosTipo;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="num_potreros_area_promedio", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $numPotrerosAreaPromedio;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="silos", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $silos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="silos_cultivo", type="string", nullable=true)
+     */
+    private $silosCultivo;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="toneladas_silos_cosechadas", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $toneladasSilosCosechadas;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="toneladas_silos_cosechadas_obsv", type="text", nullable=true)
+     */
+    private $toneladasSilosCosechadasObsv;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="suministra_minerales", type="boolean", nullable=true)
+     */
+    private $suministraMinerales;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="suministra_minerales_kgs-dias", type="string", nullable=true)
+     */
+    private $suministraMineralesKgsDias;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="suministra_concentrado", type="boolean", nullable=true)
+     */
+    private $suministraConcentrado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="suministra_concentrado_kgs-dias", type="string", nullable=true)
+     */
+    private $suministraConcentradoKgsDias;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="alimentacion_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\OtrasEspecie" table="otras_especie">
+    <indexes>
+      <index name="IDX_BE9CA2F74ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="numBufalinosButoros" type="integer" column="num_bufalinos_butoros" nullable="true"/>
+    <field name="numBufalinosBufalas" type="integer" column="num_bufalinos_bufalas" nullable="true"/>
+    <field name="numBufalinosBubillos" type="integer" column="num_bufalinos_bubillos" nullable="true"/>
+    <field name="numBufalinosBumautes" type="integer" column="num_bufalinos_bumautes" nullable="true"/>
+    <field name="numBufalinosBucerros" type="integer" column="num_bufalinos_bucerros" nullable="true"/>
+    <field name="numCaprinosCabrio" type="integer" column="num_caprinos_cabrio" nullable="true"/>
+    <field name="numCaprinosCabra" type="integer" column="num_caprinos_cabra" nullable="true"/>
+    <field name="numCaprinosCabritones" type="integer" column="num_caprinos_cabritones" nullable="true"/>
+    <field name="numCaprinosCabritonas" type="integer" column="num_caprinos_cabritonas" nullable="true"/>
+    <field name="numCaprinosCabritos" type="integer" column="num_caprinos_cabritos" nullable="true"/>
+    <field name="numOvinosCarnero" type="integer" column="num_ovinos_carnero" nullable="true"/>
+    <field name="numOvinosOveja" type="integer" column="num_ovinos_oveja" nullable="true"/>
+    <field name="numOvinosBorregos" type="integer" column="num_ovinos_borregos" nullable="true"/>
+    <field name="numOvinosBorregas" type="integer" column="num_ovinos_borregas" nullable="true"/>
+    <field name="numOvinosCorderos" type="integer" column="num_ovinos_corderos" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Carne">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

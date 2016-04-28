@@ -1,0 +1,148 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OtrasEspecie
+ *
+ * @ORM\Table(name="otras_especie", indexes={@ORM\Index(name="IDX_BE9CA2F74ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class OtrasEspecie
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_bufalinos_butoros", type="integer", nullable=true)
+     */
+    private $numBufalinosButoros;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_bufalinos_bufalas", type="integer", nullable=true)
+     */
+    private $numBufalinosBufalas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_bufalinos_bubillos", type="integer", nullable=true)
+     */
+    private $numBufalinosBubillos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_bufalinos_bumautes", type="integer", nullable=true)
+     */
+    private $numBufalinosBumautes;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_bufalinos_bucerros", type="integer", nullable=true)
+     */
+    private $numBufalinosBucerros;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_caprinos_cabrio", type="integer", nullable=true)
+     */
+    private $numCaprinosCabrio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_caprinos_cabra", type="integer", nullable=true)
+     */
+    private $numCaprinosCabra;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_caprinos_cabritones", type="integer", nullable=true)
+     */
+    private $numCaprinosCabritones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_caprinos_cabritonas", type="integer", nullable=true)
+     */
+    private $numCaprinosCabritonas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_caprinos_cabritos", type="integer", nullable=true)
+     */
+    private $numCaprinosCabritos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_ovinos_carnero", type="integer", nullable=true)
+     */
+    private $numOvinosCarnero;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_ovinos_oveja", type="integer", nullable=true)
+     */
+    private $numOvinosOveja;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_ovinos_borregos", type="integer", nullable=true)
+     */
+    private $numOvinosBorregos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_ovinos_borregas", type="integer", nullable=true)
+     */
+    private $numOvinosBorregas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_ovinos_corderos", type="integer", nullable=true)
+     */
+    private $numOvinosCorderos;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="otras_especie_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Carne
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Carne")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

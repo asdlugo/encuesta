@@ -1,0 +1,106 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TipoExplotacion
+ *
+ * @ORM\Table(name="tipo_explotacion", indexes={@ORM\Index(name="IDX_82BCA8704ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class TipoExplotacion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numero_vaca_becerro", type="integer", nullable=true)
+     */
+    private $numeroVacaBecerro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numero_vaca_maute", type="integer", nullable=true)
+     */
+    private $numeroVacaMaute;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numero_vaca_novillo", type="integer", nullable=true)
+     */
+    private $numeroVacaNovillo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="leche", type="boolean", nullable=true)
+     */
+    private $leche;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="carne", type="boolean", nullable=true)
+     */
+    private $carne;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="doble_proposito", type="boolean", nullable=true)
+     */
+    private $dobleProposito;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="extensivo", type="boolean", nullable=true)
+     */
+    private $extensivo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="intesivo", type="boolean", nullable=true)
+     */
+    private $intesivo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="semi_intensivo", type="boolean", nullable=true)
+     */
+    private $semiIntensivo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="tipo_explotacion_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

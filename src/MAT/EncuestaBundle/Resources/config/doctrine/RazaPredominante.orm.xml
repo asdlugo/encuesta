@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\RazaPredominante" table="raza_predominante">
+    <indexes>
+      <index name="IDX_597BBA014ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="numCebu" type="integer" column="num_cebu" nullable="true"/>
+    <field name="numCriollo" type="integer" column="num_criollo" nullable="true"/>
+    <field name="numHulstein" type="integer" column="num_hulstein" nullable="true"/>
+    <field name="numPSuizo" type="integer" column="num_p_suizo" nullable="true"/>
+    <field name="numMestizo" type="integer" column="num_mestizo" nullable="true"/>
+    <field name="numOtro" type="integer" column="num_otro" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <field name="numToros" type="integer" column="num_toros" nullable="true"/>
+    <field name="numTorosReproductores" type="integer" column="num_toros_reproductores" nullable="true"/>
+    <field name="numVacasProduccion" type="integer" column="num_vacas_produccion" nullable="true"/>
+    <field name="numVacasSecas" type="integer" column="num_vacas_secas" nullable="true"/>
+    <field name="numNovillos" type="integer" column="num_novillos" nullable="true"/>
+    <field name="numNovillas" type="integer" column="num_novillas" nullable="true"/>
+    <field name="numMautes" type="integer" column="num_mautes" nullable="true"/>
+    <field name="numMautas" type="integer" column="num_mautas" nullable="true"/>
+    <field name="numBecerros" type="integer" column="num_becerros" nullable="true"/>
+    <field name="numBecerras" type="integer" column="num_becerras" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

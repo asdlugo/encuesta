@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\Registro" table="registro">
+    <indexes>
+      <index name="IDX_397CA85B4ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="registroParto" type="boolean" column="registro_parto" nullable="true"/>
+    <field name="registroSecado" type="boolean" column="registro_secado" nullable="true"/>
+    <field name="pesoNacer" type="boolean" column="peso_nacer" nullable="true"/>
+    <field name="pesoDestete" type="boolean" column="peso_destete" nullable="true"/>
+    <field name="pesoAno" type="boolean" column="peso_ano" nullable="true"/>
+    <field name="pasajeLeche" type="boolean" column="pasaje_leche" nullable="true"/>
+    <field name="observaciones" type="text" column="observaciones" nullable="true"/>
+    <field name="mensual" type="integer" column="mensual" nullable="true"/>
+    <field name="semanal" type="integer" column="semanal" nullable="true"/>
+    <field name="diario" type="integer" column="diario" nullable="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

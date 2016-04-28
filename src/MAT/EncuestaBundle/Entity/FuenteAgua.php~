@@ -1,0 +1,99 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * FuenteAgua
+ *
+ * @ORM\Table(name="fuente_agua", indexes={@ORM\Index(name="IDX_4CB1765C4ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class FuenteAgua
+{
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="pozo", type="boolean", nullable=true)
+     */
+    private $pozo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="represa", type="boolean", nullable=true)
+     */
+    private $represa;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="acueducto", type="boolean", nullable=true)
+     */
+    private $acueducto;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="laguna", type="boolean", nullable=true)
+     */
+    private $laguna;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="rio_quebrada", type="boolean", nullable=true)
+     */
+    private $rioQuebrada;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="manantial", type="boolean", nullable=true)
+     */
+    private $manantial;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="publico", type="boolean", nullable=true)
+     */
+    private $publico;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="privado", type="boolean", nullable=true)
+     */
+    private $privado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="fuente_agua_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Carne
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Carne")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

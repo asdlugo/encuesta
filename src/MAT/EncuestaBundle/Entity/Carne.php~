@@ -1,0 +1,64 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Carne
+ *
+ * @ORM\Table(name="carne", indexes={@ORM\Index(name="IDX_AF905264ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class Carne
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_animales", type="integer", nullable=true)
+     */
+    private $numAnimales;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="peso_prom_venta", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $pesoPromVenta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="edad_para_venta", type="integer", nullable=true)
+     */
+    private $edadParaVenta;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="carne_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}

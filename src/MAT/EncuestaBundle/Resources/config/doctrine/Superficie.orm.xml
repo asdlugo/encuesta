@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MAT\EncuestaBundle\Entity\Superficie" table="superficie">
+    <indexes>
+      <index name="IDX_E4DE844B4ED703C9" columns="id_finca"/>
+    </indexes>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="fecha" type="date" column="fecha" nullable="true"/>
+    <field name="superficieRiego" type="string" column="superficie_riego" nullable="true"/>
+    <field name="superficieAprovechable" type="string" column="superficie_aprovechable" nullable="true"/>
+    <field name="superficieNoAprovechable" type="string" column="superficie_no_aprovechable" nullable="true"/>
+    <field name="superficieProduccion" type="string" column="superficie_produccion" nullable="true"/>
+    <field name="superficieSembrada" type="string" column="superficie_sembrada" nullable="true"/>
+    <many-to-one field="idFinca" target-entity="Finca">
+      <join-columns>
+        <join-column name="id_finca" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

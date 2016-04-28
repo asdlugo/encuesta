@@ -1,0 +1,78 @@
+<?php
+
+namespace MAT\EncuestaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Destino
+ *
+ * @ORM\Table(name="destino", indexes={@ORM\Index(name="IDX_81F64EFA4ED703C9", columns={"id_finca"})})
+ * @ORM\Entity
+ */
+class Destino
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_autoconsumo", type="integer", nullable=true)
+     */
+    private $numAutoconsumo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_cria", type="integer", nullable=true)
+     */
+    private $numCria;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_levante", type="integer", nullable=true)
+     */
+    private $numLevante;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_ceba", type="integer", nullable=true)
+     */
+    private $numCeba;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_reproduccion", type="integer", nullable=true)
+     */
+    private $numReproduccion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="destino_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
+
+    /**
+     * @var \MAT\EncuestaBundle\Entity\Finca
+     *
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
+     * })
+     */
+    private $idFinca;
+
+
+}
