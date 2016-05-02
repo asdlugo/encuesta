@@ -17,7 +17,7 @@
 # Managed by Composer
 /app/bootstrap.php.cache
 /var/bootstrap.php.cache
-/bin/*
+# /bin/*
 !bin/console
 !bin/symfony_requirements
 #/vendor/
@@ -27,7 +27,7 @@
 #/web/uploads/
 
 # Assets managed by Bower
-/web/assets/vendor/
+#/web/assets/vendor/
 
 # PHPUnit
 /app/phpunit.xml
