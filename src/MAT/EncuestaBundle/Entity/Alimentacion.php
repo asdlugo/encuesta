@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Alimentacion
  *
- * @ORM\Table(name="alimentacion", indexes={@ORM\Index(name="IDX_43ABB0864ED703C9", columns={"id_finca"})})
+ * @ORM\Table(name="alimentacion", indexes={@ORM\Index(name="idx_43abb0864ed703c9", columns={"id_finca"})})
  * @ORM\Entity
  */
 class Alimentacion
@@ -162,9 +162,9 @@ class Alimentacion
     /**
      * @var string
      *
-     * @ORM\Column(name="suministra_minerales_kgs-dias", type="string", nullable=true)
+     * @ORM\Column(name="suministra_minerales_kgs", type="string", nullable=true)
      */
-    private $suministraMineralesKgsDias;
+    private $suministraMineralesKgs;
 
     /**
      * @var boolean
@@ -176,9 +176,9 @@ class Alimentacion
     /**
      * @var string
      *
-     * @ORM\Column(name="suministra_concentrado_kgs-dias", type="string", nullable=true)
+     * @ORM\Column(name="suministra_concentrado_kgs", type="string", nullable=true)
      */
-    private $suministraConcentradoKgsDias;
+    private $suministraConcentradoKgs;
 
     /**
      * @var \DateTime
@@ -693,26 +693,26 @@ class Alimentacion
     }
 
     /**
-     * Set suministraMineralesKgsDias
+     * Set suministraMineralesKgs
      *
-     * @param string $suministraMineralesKgsDias
+     * @param string $suministraMineralesKgs
      * @return Alimentacion
      */
-    public function setSuministraMineralesKgsDias($suministraMineralesKgsDias)
+    public function setSuministraMineralesKgs($suministraMineralesKgs)
     {
-        $this->suministraMineralesKgsDias = $suministraMineralesKgsDias;
+        $this->suministraMineralesKgs = $suministraMineralesKgs;
 
         return $this;
     }
 
     /**
-     * Get suministraMineralesKgsDias
+     * Get suministraMineralesKgs
      *
      * @return string 
      */
-    public function getSuministraMineralesKgsDias()
+    public function getSuministraMineralesKgs()
     {
-        return $this->suministraMineralesKgsDias;
+        return $this->suministraMineralesKgs;
     }
 
     /**
@@ -739,26 +739,26 @@ class Alimentacion
     }
 
     /**
-     * Set suministraConcentradoKgsDias
+     * Set suministraConcentradoKgs
      *
-     * @param string $suministraConcentradoKgsDias
+     * @param string $suministraConcentradoKgs
      * @return Alimentacion
      */
-    public function setSuministraConcentradoKgsDias($suministraConcentradoKgsDias)
+    public function setSuministraConcentradoKgs($suministraConcentradoKgs)
     {
-        $this->suministraConcentradoKgsDias = $suministraConcentradoKgsDias;
+        $this->suministraConcentradoKgs = $suministraConcentradoKgs;
 
         return $this;
     }
 
     /**
-     * Get suministraConcentradoKgsDias
+     * Get suministraConcentradoKgs
      *
      * @return string 
      */
-    public function getSuministraConcentradoKgsDias()
+    public function getSuministraConcentradoKgs()
     {
-        return $this->suministraConcentradoKgsDias;
+        return $this->suministraConcentradoKgs;
     }
 
     /**

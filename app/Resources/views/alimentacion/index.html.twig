@@ -27,9 +27,9 @@
                 <th>Toneladassiloscosechadas</th>
                 <th>Toneladassiloscosechadasobsv</th>
                 <th>Suministraminerales</th>
-                <th>Suministramineraleskgsdias</th>
+                <th>Suministramineraleskgs</th>
                 <th>Suministraconcentrado</th>
-                <th>Suministraconcentradokgsdias</th>
+                <th>Suministraconcentradokgs</th>
                 <th>Fecha</th>
                 <th>Id</th>
                 <th>Actions</th>
@@ -59,9 +59,9 @@
                 <td>{{ alimentacion.toneladasSilosCosechadas }}</td>
                 <td>{{ alimentacion.toneladasSilosCosechadasObsv }}</td>
                 <td>{% if alimentacion.suministraMinerales %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.suministraMineralesKgsDias }}</td>
+                <td>{{ alimentacion.suministraMineralesKgs }}</td>
                 <td>{% if alimentacion.suministraConcentrado %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.suministraConcentradoKgsDias }}</td>
+                <td>{{ alimentacion.suministraConcentradoKgs }}</td>
                 <td>{% if alimentacion.fecha %}{{ alimentacion.fecha|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ alimentacion.id }}</td>
                 <td>

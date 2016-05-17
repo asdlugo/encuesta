@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * FuenteAgua
  *
- * @ORM\Table(name="fuente_agua", indexes={@ORM\Index(name="IDX_4CB1765C4ED703C9", columns={"id_finca"})})
+ * @ORM\Table(name="fuente_agua", indexes={@ORM\Index(name="idx_4cb1765c4ed703c9", columns={"id_finca"})})
  * @ORM\Entity
  */
 class FuenteAgua
@@ -86,9 +86,9 @@ class FuenteAgua
     private $id;
 
     /**
-     * @var \MAT\EncuestaBundle\Entity\Carne
+     * @var \MAT\EncuestaBundle\Entity\Finca
      *
-     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Carne")
+     * @ORM\ManyToOne(targetEntity="MAT\EncuestaBundle\Entity\Finca")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_finca", referencedColumnName="id")
      * })
@@ -317,10 +317,10 @@ class FuenteAgua
     /**
      * Set idFinca
      *
-     * @param \MAT\EncuestaBundle\Entity\Carne $idFinca
+     * @param \MAT\EncuestaBundle\Entity\Finca $idFinca
      * @return FuenteAgua
      */
-    public function setIdFinca(\MAT\EncuestaBundle\Entity\Carne $idFinca = null)
+    public function setIdFinca(\MAT\EncuestaBundle\Entity\Finca $idFinca = null)
     {
         $this->idFinca = $idFinca;
 
@@ -330,7 +330,7 @@ class FuenteAgua
     /**
      * Get idFinca
      *
-     * @return \MAT\EncuestaBundle\Entity\Carne 
+     * @return \MAT\EncuestaBundle\Entity\Finca 
      */
     public function getIdFinca()
     {

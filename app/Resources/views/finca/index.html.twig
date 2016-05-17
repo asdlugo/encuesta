@@ -15,6 +15,8 @@
                 <th>Idcondicionvia</th>
                 <th>Documentointi</th>
                 <th>Hierroinsai</th>
+                <th>Visible</th>
+                <th>Nombre</th>
                 <th>Id</th>
                 <th>Actions</th>
             </tr>
@@ -31,6 +33,8 @@
                 <td>{{ finca.idCondicionVia }}</td>
                 <td>{{ finca.documentoInti }}</td>
                 <td>{{ finca.hierroInsai }}</td>
+                <td>{% if finca.visible %}Yes{% else %}No{% endif %}</td>
+                <td>{{ finca.nombre }}</td>
                 <td>{{ finca.id }}</td>
                 <td>
                     <ul>

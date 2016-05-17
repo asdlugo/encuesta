@@ -1,3 +1,35 @@
+encuesta_manejo_reproductivo:
+    resource: "@EncuestaBundle/Controller/ManejoReproductivoController.php"
+    type:     annotation
+
+encuesta_sistema_riego:
+    resource: "@EncuestaBundle/Controller/SistemaRiegoController.php"
+    type:     annotation
+
+encuesta_fuente_agua:
+    resource: "@EncuestaBundle/Controller/FuenteAguaController.php"
+    type:     annotation
+
+encuesta_financiamiento:
+    resource: "@EncuestaBundle/Controller/FinanciamientoController.php"
+    type:     annotation
+
+encuesta_fuente_agua:
+    resource: "@EncuestaBundle/Controller/FuenteAguaController.php"
+    type:     annotation
+
+encuesta_fuente_agua:
+    resource: "@EncuestaBundle/Controller/FuenteAguaController.php"
+    type:     annotation
+
+encuesta_finca:
+    resource: "@EncuestaBundle/Controller/FincaController.php"
+    type:     annotation
+
+encuesta_alimentacion:
+    resource: "@EncuestaBundle/Controller/AlimentacionController.php"
+    type:     annotation
+
 encuesta_carne:
     resource: "@EncuestaBundle/Controller/CarneController.php"
     type:     annotation

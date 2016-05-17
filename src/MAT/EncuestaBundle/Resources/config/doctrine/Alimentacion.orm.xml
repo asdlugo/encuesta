@@ -2,7 +2,7 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="MAT\EncuestaBundle\Entity\Alimentacion" table="alimentacion">
     <indexes>
-      <index name="IDX_43ABB0864ED703C9" columns="id_finca"/>
+      <index name="idx_43abb0864ed703c9" columns="id_finca"/>
     </indexes>
     <id name="id" type="bigint" column="id">
       <generator strategy="SEQUENCE"/>
@@ -28,9 +28,9 @@
     <field name="toneladasSilosCosechadas" type="float" column="toneladas_silos_cosechadas" precision="10" scale="0" nullable="true"/>
     <field name="toneladasSilosCosechadasObsv" type="text" column="toneladas_silos_cosechadas_obsv" nullable="true"/>
     <field name="suministraMinerales" type="boolean" column="suministra_minerales" nullable="true"/>
-    <field name="suministraMineralesKgsDias" type="string" column="suministra_minerales_kgs-dias" nullable="true"/>
+    <field name="suministraMineralesKgs" type="string" column="suministra_minerales_kgs" nullable="true"/>
     <field name="suministraConcentrado" type="boolean" column="suministra_concentrado" nullable="true"/>
-    <field name="suministraConcentradoKgsDias" type="string" column="suministra_concentrado_kgs-dias" nullable="true"/>
+    <field name="suministraConcentradoKgs" type="string" column="suministra_concentrado_kgs" nullable="true"/>
     <field name="fecha" type="date" column="fecha" nullable="true"/>
     <many-to-one field="idFinca" target-entity="Finca">
       <join-columns>

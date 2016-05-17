@@ -24,6 +24,8 @@ class FincaType extends AbstractType
             ->add('idCondicionVia')
             ->add('documentoInti')
             ->add('hierroInsai')
+            ->add('visible')
+            ->add('nombre')
         ;
     }
     

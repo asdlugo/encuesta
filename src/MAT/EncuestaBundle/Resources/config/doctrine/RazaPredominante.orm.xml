@@ -2,7 +2,7 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="MAT\EncuestaBundle\Entity\RazaPredominante" table="raza_predominante">
     <indexes>
-      <index name="IDX_597BBA014ED703C9" columns="id_finca"/>
+      <index name="idx_597bba014ed703c9" columns="id_finca"/>
     </indexes>
     <id name="id" type="bigint" column="id">
       <generator strategy="SEQUENCE"/>

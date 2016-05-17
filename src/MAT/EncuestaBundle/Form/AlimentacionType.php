@@ -36,9 +36,9 @@ class AlimentacionType extends AbstractType
             ->add('toneladasSilosCosechadas')
             ->add('toneladasSilosCosechadasObsv')
             ->add('suministraMinerales')
-            ->add('suministraMineralesKgsDias')
+            ->add('suministraMineralesKgs')
             ->add('suministraConcentrado')
-            ->add('suministraConcentradoKgsDias')
+            ->add('suministraConcentradoKgs')
             ->add('fecha', 'date')
             ->add('idFinca')
         ;

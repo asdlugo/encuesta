@@ -396,4 +396,5 @@ class Productor
     {
         return $this->idNivelEducacion;
     }
+	
 }

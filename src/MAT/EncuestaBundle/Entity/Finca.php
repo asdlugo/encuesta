@@ -43,14 +43,14 @@ class Finca
     /**
      * @var string
      *
-     * @ORM\Column(name="gps_utm_norte", type="string", nullable=true)
+     * @ORM\Column(name="gps_utm_norte", type="string", length=255, nullable=true)
      */
     private $gpsUtmNorte;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gps_utm_este", type="string", nullable=true)
+     * @ORM\Column(name="gps_utm_este", type="string", length=255, nullable=true)
      */
     private $gpsUtmEste;
 
@@ -64,16 +64,30 @@ class Finca
     /**
      * @var string
      *
-     * @ORM\Column(name="documento_inti", type="string", nullable=true)
+     * @ORM\Column(name="documento_inti", type="string", length=255, nullable=true)
      */
     private $documentoInti;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="hierro_insai", type="string", nullable=true)
+     * @ORM\Column(name="hierro_insai", type="string", length=255, nullable=true)
      */
     private $hierroInsai;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="visible", type="boolean", nullable=true)
+     */
+    private $visible;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", nullable=true)
+     */
+    private $nombre;
 
     /**
      * @var integer
@@ -295,6 +309,52 @@ class Finca
     }
 
     /**
+     * Set visible
+     *
+     * @param boolean $visible
+     * @return Finca
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean 
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Finca
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
      * Get id
      *
      * @return integer 
@@ -302,5 +362,9 @@ class Finca
     public function getId()
     {
         return $this->id;
+    }
+	    public function __toString()
+    {
+        return $this->nombre;
     }
 }

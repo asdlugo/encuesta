@@ -42,6 +42,14 @@
                 <td>{{ finca.hierroInsai }}</td>
             </tr>
             <tr>
+                <th>Visible</th>
+                <td>{% if finca.visible %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ finca.nombre }}</td>
+            </tr>
+            <tr>
                 <th>Id</th>
                 <td>{{ finca.id }}</td>
             </tr>

@@ -8,10 +8,12 @@
     <field name="idParroquia" type="bigint" column="id_parroquia" nullable="true"/>
     <field name="idSector" type="bigint" column="id_sector" nullable="true"/>
     <field name="idCaserio" type="bigint" column="id_caserio" nullable="true"/>
-    <field name="gpsUtmNorte" type="string" column="gps_utm_norte" nullable="true"/>
-    <field name="gpsUtmEste" type="string" column="gps_utm_este" nullable="true"/>
+    <field name="gpsUtmNorte" type="string" column="gps_utm_norte" length="255" nullable="true"/>
+    <field name="gpsUtmEste" type="string" column="gps_utm_este" length="255" nullable="true"/>
     <field name="idCondicionVia" type="bigint" column="id_condicion_via" nullable="true"/>
-    <field name="documentoInti" type="string" column="documento_inti" nullable="true"/>
-    <field name="hierroInsai" type="string" column="hierro_insai" nullable="true"/>
+    <field name="documentoInti" type="string" column="documento_inti" length="255" nullable="true"/>
+    <field name="hierroInsai" type="string" column="hierro_insai" length="255" nullable="true"/>
+    <field name="visible" type="boolean" column="visible" nullable="true"/>
+    <field name="nombre" type="string" column="nombre" nullable="true"/>
   </entity>
 </doctrine-mapping>

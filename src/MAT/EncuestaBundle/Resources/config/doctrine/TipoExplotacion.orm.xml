@@ -2,7 +2,7 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="MAT\EncuestaBundle\Entity\TipoExplotacion" table="tipo_explotacion">
     <indexes>
-      <index name="IDX_82BCA8704ED703C9" columns="id_finca"/>
+      <index name="idx_82bca8704ed703c9" columns="id_finca"/>
     </indexes>
     <id name="id" type="bigint" column="id">
       <generator strategy="SEQUENCE"/>

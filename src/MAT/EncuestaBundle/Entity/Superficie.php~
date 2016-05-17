@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Superficie
  *
- * @ORM\Table(name="superficie", indexes={@ORM\Index(name="IDX_E4DE844B4ED703C9", columns={"id_finca"})})
+ * @ORM\Table(name="superficie", indexes={@ORM\Index(name="idx_e4de844b4ed703c9", columns={"id_finca"})})
  * @ORM\Entity
  */
 class Superficie

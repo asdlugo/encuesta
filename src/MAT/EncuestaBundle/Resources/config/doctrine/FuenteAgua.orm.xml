@@ -2,7 +2,7 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="MAT\EncuestaBundle\Entity\FuenteAgua" table="fuente_agua">
     <indexes>
-      <index name="IDX_4CB1765C4ED703C9" columns="id_finca"/>
+      <index name="idx_4cb1765c4ed703c9" columns="id_finca"/>
     </indexes>
     <id name="id" type="bigint" column="id">
       <generator strategy="SEQUENCE"/>
@@ -16,7 +16,7 @@
     <field name="publico" type="boolean" column="publico" nullable="true"/>
     <field name="privado" type="boolean" column="privado" nullable="true"/>
     <field name="fecha" type="date" column="fecha" nullable="true"/>
-    <many-to-one field="idFinca" target-entity="Carne">
+    <many-to-one field="idFinca" target-entity="Finca">
       <join-columns>
         <join-column name="id_finca" referenced-column-name="id"/>
       </join-columns>

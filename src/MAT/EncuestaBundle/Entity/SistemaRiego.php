@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * SistemaRiego
  *
- * @ORM\Table(name="sistema_riego", indexes={@ORM\Index(name="IDX_D4411EF74ED703C9", columns={"id_finca"})})
+ * @ORM\Table(name="sistema_riego", indexes={@ORM\Index(name="idx_d4411ef74ed703c9", columns={"id_finca"})})
  * @ORM\Entity
  */
 class SistemaRiego
@@ -78,7 +78,7 @@ class SistemaRiego
     /**
      * @var string
      *
-     * @ORM\Column(name="condiciones", type="string", nullable=true)
+     * @ORM\Column(name="condiciones", type="string", length=255, nullable=true)
      */
     private $condiciones;
 
