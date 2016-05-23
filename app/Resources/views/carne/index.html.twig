@@ -46,12 +46,12 @@
                                                     </center>
                                                 </td>
                                                 
-                                                  <td><a href="{{ path('carne_show', { 'id': carne.id }) }}">{{ carne.numAnimales }}</a></td>
-                <td>{{ carne.pesoPromVenta }}</td>
-                <td>{{ carne.edadParaVenta }}</td>
-                <td>{% if carne.fecha %}{{ carne.fecha|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ carne.id }}</td>
-                <td>
+                                                  <td>{{ carne.numAnimales }}</td>
+                                                <td>{{ carne.pesoPromVenta }}</td>
+                                                <td>{{ carne.edadParaVenta }}</td>
+                                                <td>{% if carne.fecha %}{{ carne.fecha|date('Y-m-d') }}{% endif %}</td>
+                                                
+                                                <td>
                 
                                             </tr>
                                         {% endfor %}
