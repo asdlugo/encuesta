@@ -24,9 +24,9 @@
                                             <tr>
                                                 <th class="all" width="10%">Detalle</th>
                                                 <th class="all" width="10%">Editar</th>
-                                                <th>Pastocortetipo1</th>
-                                                <th>Pastocortehectarias1</th>
-                                                <th>Pastocortetipo2</th>
+                                                <th>Pasto corte tipo 1</th>
+                                                <th>Pasto corte hectarias 1</th>
+                                                <th>Pasto corte tipo 2</th>
                                                 <th>Pastocortehectareas2</th>
                                                 <th>Brachariatipo</th>
                                                 <th>Brachariahectareas</th>
@@ -36,21 +36,19 @@
                                                 <th>Guineahectareas</th>
                                                 <th>Alemantipo</th>
                                                 <th>Alemanhectareas</th>
-                                                <th>Canaazucartipo</th>
-                                                <th>Canaazucarhectareas</th>
-                                                <th>Numpotrerostipo</th>
+                                                <th>Cana azucar tipo</th>
+                                                <th>Cana azucar hectareas</th>
+                                                <th>Num potreros tipo</th>
                                                 <th>Numpotrerosareapromedio</th>
                                                 <th>Silos</th>
-                                                <th>Siloscultivo</th>
-                                                <th>Toneladassiloscosechadas</th>
-                                                <th>Toneladassiloscosechadasobsv</th>
+                                                <th>Silos cultivo</th>
+                                                <th>Toneladas silos cosechadas</th>
+                                                <th>Toneladas silos cosechadas obsv</th>
                                                 <th>Suministraminerales</th>
                                                 <th>Suministramineraleskgs</th>
                                                 <th>Suministraconcentrado</th>
-                                                <th>Suministraconcentradokgs</th>
+                                                <th>Suministra concentrado kgs</th>
                                                 <th>Fecha</th>
-                                                <th>Id</th>
-                                                <th>Actions</th>
                                                 </tr>
                                                 </thead>
     
@@ -73,31 +71,31 @@
                                                 </td>
                                                 
                                                   <td><a href="{{ path('alimentacion_show', { 'id': alimentacion.id }) }}">{{ alimentacion.pastoCorteTipo1 }}</a></td>
-                <td>{{ alimentacion.pastoCorteHectarias1 }}</td>
-                <td>{{ alimentacion.pastoCorteTipo2 }}</td>
-                <td>{{ alimentacion.pastoCorteHectareas2 }}</td>
-                <td>{% if alimentacion.brachariaTipo %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.brachariaHectareas }}</td>
-                <td>{% if alimentacion.estrellaTipo %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.estrellaHectareas }}</td>
-                <td>{% if alimentacion.guineaTipo %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.guineaHectareas }}</td>
-                <td>{% if alimentacion.alemanTipo %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.alemanHectareas }}</td>
-                <td>{{ alimentacion.canaAzucarTipo }}</td>
-                <td>{{ alimentacion.canaAzucarHectareas }}</td>
-                <td>{{ alimentacion.numPotrerosTipo }}</td>
-                <td>{{ alimentacion.numPotrerosAreaPromedio }}</td>
-                <td>{{ alimentacion.silos }}</td>
-                <td>{{ alimentacion.silosCultivo }}</td>
-                <td>{{ alimentacion.toneladasSilosCosechadas }}</td>
-                <td>{{ alimentacion.toneladasSilosCosechadasObsv }}</td>
-                <td>{% if alimentacion.suministraMinerales %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.suministraMineralesKgs }}</td>
-                <td>{% if alimentacion.suministraConcentrado %}Yes{% else %}No{% endif %}</td>
-                <td>{{ alimentacion.suministraConcentradoKgs }}</td>
-                <td>{% if alimentacion.fecha %}{{ alimentacion.fecha|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ alimentacion.id }}</td>
+                                                    <td>{{ alimentacion.pastoCorteHectarias1 }}</td>
+                                                    <td>{{ alimentacion.pastoCorteTipo2 }}</td>
+                                                    <td>{{ alimentacion.pastoCorteHectareas2 }}</td>
+                                                    <td>{% if alimentacion.brachariaTipo %}Yes{% else %}No{% endif %}</td>
+                                                    <td>{{ alimentacion.brachariaHectareas }}</td>
+                                                    <td>{% if alimentacion.estrellaTipo %}Yes{% else %}No{% endif %}</td>
+                                                    <td>{{ alimentacion.estrellaHectareas }}</td>
+                                                    <td>{% if alimentacion.guineaTipo %}Yes{% else %}No{% endif %}</td>
+                                                    <td>{{ alimentacion.guineaHectareas }}</td>
+                                                    <td>{% if alimentacion.alemanTipo %}Yes{% else %}No{% endif %}</td>
+                                                    <td>{{ alimentacion.alemanHectareas }}</td>
+                                                    <td>{{ alimentacion.canaAzucarTipo }}</td>
+                                                    <td>{{ alimentacion.canaAzucarHectareas }}</td>
+                                                    <td>{{ alimentacion.numPotrerosTipo }}</td>
+                                                    <td>{{ alimentacion.numPotrerosAreaPromedio }}</td>
+                                                    <td>{{ alimentacion.silos }}</td>
+                                                    <td>{{ alimentacion.silosCultivo }}</td>
+                                                    <td>{{ alimentacion.toneladasSilosCosechadas }}</td>
+                                                    <td>{{ alimentacion.toneladasSilosCosechadasObsv }}</td>
+                                                    <td>{% if alimentacion.suministraMinerales %}Yes{% else %}No{% endif %}</td>
+                                                    <td>{{ alimentacion.suministraMineralesKgs }}</td>
+                                                    <td>{% if alimentacion.suministraConcentrado %}Yes{% else %}No{% endif %}</td>
+                                                    <td>{{ alimentacion.suministraConcentradoKgs }}</td>
+                                                    <td>{% if alimentacion.fecha %}{{ alimentacion.fecha|date('Y-m-d') }}{% endif %}</td>
+                                                    <td>{{ alimentacion.id }}</td>
                 
                                             </tr>
                                         {% endfor %}
