@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>FuenteAgua</h1>
+    <h1>Fuente de Agua</h1>
 
     <table>
         <tbody>
@@ -50,14 +50,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('fuenteagua_index') }}">Back to the list</a>
+            <a href="{{ path('fuenteagua_index') }}">Volver a la lista</a>
         </li>
         <li>
-            <a href="{{ path('fuenteagua_edit', { 'id': fuenteAgua.id }) }}">Edit</a>
+            <a href="{{ path('fuenteagua_edit', { 'id': fuenteAgua.id }) }}">Editar</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Eliminar">
             {{ form_end(delete_form) }}
         </li>
     </ul>

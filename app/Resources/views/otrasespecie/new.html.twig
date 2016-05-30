@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>OtrasEspecie creation</h1>
+    <h1>Otras Especie creation</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input type="submit" value="Crear" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('otrasespecie_index') }}">Back to the list</a>
+            <a href="{{ path('otrasespecie_index') }}">Volver a la lista</a>
         </li>
     </ul>
 {% endblock %}

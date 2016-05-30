@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>NivelEducacion</h1>
+    <h1>Nivel de Educación</h1>
 
     <table>
         <tbody>
             <tr>
-                <th>Descripcion</th>
+                <th>Descripción</th>
                 <td>{{ nivelEducacion.descripcion }}</td>
             </tr>
             <tr>
@@ -18,14 +18,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('niveleducacion_index') }}">Back to the list</a>
+            <a href="{{ path('niveleducacion_index') }}">Volver a la lista</a>
         </li>
         <li>
-            <a href="{{ path('niveleducacion_edit', { 'id': nivelEducacion.id }) }}">Edit</a>
+            <a href="{{ path('niveleducacion_edit', { 'id': nivelEducacion.id }) }}">Editar</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Eliminar">
             {{ form_end(delete_form) }}
         </li>
     </ul>

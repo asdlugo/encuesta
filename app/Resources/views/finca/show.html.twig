@@ -58,14 +58,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('finca_index') }}">Back to the list</a>
+            <a href="{{ path('finca_index') }}">Volver a la lista</a>
         </li>
         <li>
-            <a href="{{ path('finca_edit', { 'id': finca.id }) }}">Edit</a>
+            <a href="{{ path('finca_edit', { 'id': finca.id }) }}">Editar</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Eliminar">
             {{ form_end(delete_form) }}
         </li>
     </ul>
