@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Ordeno list</h1>
+    <h1>Ordeño</h1>
 
     <table>
         <thead>
             <tr>
-                <th>Numvacasordenadas</th>
-                <th>Ltsleche</th>
-                <th>Numordenosaldia</th>
-                <th>Numautoconsumo</th>
-                <th>Numreceptoria</th>
-                <th>Numqueseras</th>
-                <th>Numquesofinca</th>
+                <th>Num vacas ordeñadas</th>
+                <th>Litros de leche</th>
+                <th>Num ordeños aldia</th>
+                <th>Num autoconsumo</th>
+                <th>Num receptoría</th>
+                <th>Num queseras</th>
+                <th>Num queso finca</th>
                 <th>Fecha</th>
                 <th>Id</th>
                 <th>Actions</th>
@@ -33,10 +33,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('ordeno_show', { 'id': ordeno.id }) }}">show</a>
+                            <a href="{{ path('ordeno_show', { 'id': ordeno.id }) }}">Mostrar</a>
                         </li>
                         <li>
-                            <a href="{{ path('ordeno_edit', { 'id': ordeno.id }) }}">edit</a>
+                            <a href="{{ path('ordeno_edit', { 'id': ordeno.id }) }}">Editar</a>
                         </li>
                     </ul>
                 </td>
@@ -47,7 +47,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('ordeno_new') }}">Create a new entry</a>
+            <a href="{{ path('ordeno_new') }}">Crear nueva entrada</a>
         </li>
     </ul>
 {% endblock %}

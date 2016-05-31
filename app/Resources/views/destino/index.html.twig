@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Destino list</h1>
+    <h1>Destino</h1>
 
     <table>
         <thead>
@@ -29,10 +29,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('destino_show', { 'id': destino.id }) }}">show</a>
+                            <a href="{{ path('destino_show', { 'id': destino.id }) }}">Mostrar</a>
                         </li>
                         <li>
-                            <a href="{{ path('destino_edit', { 'id': destino.id }) }}">edit</a>
+                            <a href="{{ path('destino_edit', { 'id': destino.id }) }}">Editar</a>
                         </li>
                     </ul>
                 </td>
@@ -43,7 +43,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('destino_new') }}">Create a new entry</a>
+            <a href="{{ path('destino_new') }}">Crear una nueva entrada</a>
         </li>
     </ul>
 {% endblock %}

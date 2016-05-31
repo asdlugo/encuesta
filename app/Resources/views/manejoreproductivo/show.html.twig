@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>ManejoReproductivo</h1>
+    <h1>Manejo Reproductivo</h1>
 
     <table>
         <tbody>
@@ -34,14 +34,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('manejoreproductivo_index') }}">Back to the list</a>
+            <a href="{{ path('manejoreproductivo_index') }}">Volver a la lista</a>
         </li>
         <li>
-            <a href="{{ path('manejoreproductivo_edit', { 'id': manejoReproductivo.id }) }}">Edit</a>
+            <a href="{{ path('manejoreproductivo_edit', { 'id': manejoReproductivo.id }) }}">Editar</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Eliminar">
             {{ form_end(delete_form) }}
         </li>
     </ul>

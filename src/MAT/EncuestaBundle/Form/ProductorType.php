@@ -18,9 +18,16 @@ class ProductorType extends AbstractType
             ->add('nombre')
             ->add('apellido')
             ->add('rif')
-            ->add('tlf1')
-            ->add('tlf2')
-            ->add('emal1')
+            ->add('tlf1', 'text', array(
+                 'label' =>'Teléfono 1',    
+                 'attr' => array('placeholder' => 'Ingrese Numero', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tlf2', 'text', array(
+                 'label' =>'Teléfono 2',    
+                 'attr' => array('placeholder' => 'Ingrese Numero', 'class'=> 'form-control input-sm ')
+            ->add('emal1', 'text', array(
+                 'label' =>'Email',    
+                 'attr' => array('placeholder' => 'Ingrese su correo', 'class'=> 'form-control input-sm ')
             ->add('email2')
             ->add('sabeLeer')
             ->add('exProductor')

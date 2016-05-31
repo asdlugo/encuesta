@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Productor list</h1>
+    <h1>Productor</h1>
 
     <table>
         <thead>
@@ -39,10 +39,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('productor_show', { 'id': productor.id }) }}">show</a>
+                            <a href="{{ path('productor_show', { 'id': productor.id }) }}">Mostrar</a>
                         </li>
                         <li>
-                            <a href="{{ path('productor_edit', { 'id': productor.id }) }}">edit</a>
+                            <a href="{{ path('productor_edit', { 'id': productor.id }) }}">Editar</a>
                         </li>
                     </ul>
                 </td>
@@ -53,7 +53,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('productor_new') }}">Create a new entry</a>
+            <a href="{{ path('productor_new') }}">Crear nueva entrada</a>
         </li>
     </ul>
 {% endblock %}
