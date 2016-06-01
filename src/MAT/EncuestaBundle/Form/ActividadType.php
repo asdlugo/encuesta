@@ -15,43 +15,154 @@ class ActividadType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('corralesCantidad')
-            ->add('corralesObservaciones')
-            ->add('mangaCantidad')
-            ->add('mangaObservaciones')
-            ->add('bretesCantidad')
-            ->add('bretesObservaciones')
-            ->add('romanaCantidad')
-            ->add('romanaObservaciones')
-            ->add('salaOrdenoCantidad')
-            ->add('salaOrdenoObservaciones')
-            ->add('bebederosCantidad')
-            ->add('bebederosObservaciones')
-            ->add('comederosCantidad')
-            ->add('comederosObservaciones')
-            ->add('cercoElectricoCantidad')
-            ->add('cercoElectricoObservaciones')
-            ->add('numPotrerosCantidad')
-            ->add('numPotrerosObservaciones')
-            ->add('hasXPotrerosCantidad')
-            ->add('hasXPotrerosObservaciones')
-            ->add('plantaElectricaCantidad')
-            ->add('plantaElectricaObservaciones')
-            ->add('tractores4x2Cantidad')
-            ->add('tractores4x2Observaciones')
-            ->add('tractores4x4Cantidad')
-            ->add('tractores4x4Observaciones')
-            ->add('galponesCantidad')
-            ->add('galponesObservaciones')
-            ->add('silosCantidad')
-            ->add('silosObservaciones')
-            ->add('sembradoraCantidad')
-            ->add('sembradoraObservaciones')
-            ->add('cosechadoraCantidad')
-            ->add('cosechadoraObservaciones')
-            ->add('asperjadoraCantidad')
-            ->add('asperjadoraObservaciones')
-            ->add('carretaZorraCantidad')
+            ->add('corralesCantidad', 'text', array(
+                 'label' =>'Cantidad de Corrales',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('corralesObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('mangaCantidad', 'text', array(
+                 'label' =>'Cantidad de Manga',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('mangaObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('bretesCantidad' , 'text', array(
+                 'label' =>'Cantidad de Bretes',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('bretesObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('romanaCantidad', 'text', array(
+                 'label' =>'Cantidad de Romana',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('romanaObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('salaOrdenoCantidad', 'text', array(
+                 'label' =>'Cantidad de Sala de Ordeño',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('salaOrdenoObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('bebederosCantidad', 'text', array(
+                 'label' =>'Cantidad de bebederos',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('bebederosObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('comederosCantidad', 'text', array(
+                 'label' =>'Cantidad de Comederos',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('comederosObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cercoElectricoCantidad', 'text', array(
+                 'label' =>'Cantidad de Cerco Eléctrico',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cercoElectricoObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('numPotrerosCantidad', 'text', array(
+                 'label' =>'Cantidad de Potreros',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('numPotrerosObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('hasXPotrerosCantidad', 'text', array(
+                 'label' =>'Cantidad de HAS por Potreros',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('hasXPotrerosObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('plantaElectricaCantidad', 'text', array(
+                 'label' =>'Cantidad de Planta Eléctrica',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('plantaElectricaObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tractores4x2Cantidad', 'text', array(
+                 'label' =>'Cantidad de Tractores 4x2',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tractores4x2Observaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tractores4x4Cantidad', 'text', array(
+                 'label' =>'Cantidad de Tractores 4x4',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tractores4x4Observaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('galponesCantidad', 'text', array(
+                 'label' =>'Cantidad de Galpones',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('galponesObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('silosCantidad', 'text', array(
+                 'label' =>'Cantidad de Silos',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('silosObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('sembradoraCantidad', 'text', array(
+                 'label' =>'Cantidad de Sembradora',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('sembradoraObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cosechadoraCantidad', 'text', array(
+                 'label' =>'Cantidad de Cosechadora',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cosechadoraObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('asperjadoraCantidad', 'text', array(
+                 'label' =>'Cantidad de Asperjadora',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('asperjadoraObservaciones', 'text', array(
+                 'label' =>'Observaciones  ',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('carretaZorraCantidad', 'text', array(
+                 'label' =>'Cantidad de Carreta Zorra',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
             ->add('carretaZorraObservaciones')
             ->add('rotativaCantidad')
             ->add('rotativaObservaciones')
