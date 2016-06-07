@@ -16,11 +16,26 @@ class SuperficieType extends AbstractType
     {
         $builder
             ->add('fecha', 'date')
-            ->add('superficieRiego')
-            ->add('superficieAprovechable')
-            ->add('superficieNoAprovechable')
-            ->add('superficieProduccion')
-            ->add('superficieSembrada')
+            ->add('superficieRiego', 'text', array(
+                 'label' =>'Superficie Riego',    
+                 'attr' => array('class'=> 'form-control input-sm ')
+             )) 
+            ->add('superficieAprovechable', 'text', array(
+                 'label' =>'Superficie Aprovechable',    
+                 'attr' => array('class'=> 'form-control input-sm ')
+             )) 
+            ->add('superficieNoAprovechable', 'text', array(
+                 'label' =>'Superficie No Aprovechable',    
+                 'attr' => array('class'=> 'form-control input-sm ')
+             )) 
+            ->add('superficieProduccion', 'text', array(
+                 'label' =>'Superficie Producción',    
+                 'attr' => array('class'=> 'form-control input-sm ')
+             )) 
+            ->add('superficieSembrada', 'text', array(
+                 'label' =>'Superficie Sembrada',    
+                 'attr' => array('class'=> 'form-control input-sm ')
+             )) 
             ->add('idFinca')
         ;
     }

@@ -15,9 +15,18 @@ class CarneType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('numAnimales')
-            ->add('pesoPromVenta')
-            ->add('edadParaVenta')
+            ->add('numAnimales', 'text', array(
+                 'label' =>'Número de Animales',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('pesoPromVenta', 'text', array(
+                 'label' =>'Peso Promedio de Venta',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('edadParaVenta', 'text', array(
+                 'label' =>'Edad Para la Venta',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
             ->add('fecha', 'date')
             ->add('idFinca')
         ;

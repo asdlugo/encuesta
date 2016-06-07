@@ -15,7 +15,10 @@ class FinanciamientoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('bancoInstitucion')
+            ->add('bancoInstitucion', 'text', array(
+                 'label' =>'Banco o Institución',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
             ->add('requeVacas')
             ->add('requeNovillas')
             ->add('fecha', 'date')

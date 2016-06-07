@@ -15,13 +15,37 @@ class DestinoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('numAutoconsumo')
-            ->add('numCria')
-            ->add('numLevante')
-            ->add('numCeba')
-            ->add('numReproduccion')
-            ->add('fecha', 'date')
-            ->add('idFinca')
+            ->add('numAutoconsumo', 'text', array(
+                 'label' =>'Número de Autoconsumo',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('numCria', 'text', array(
+                 'label' =>'Número de Cría',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('numLevante', 'text', array(
+                 'label' =>'Número de Levante',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('numCeba', 'text', array(
+                 'label' =>'Número de Ceba',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('numReproduccion', 'text', array(
+                 'label' =>'Número de Reproducción',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('fecha', 'date', array(
+                   'widget' => 'single_text',
+                    'format' => 'dd-MM-yyyy',
+                   'attr' => array(   
+                                    
+                                    'class'=> 'form-control input-small datepicker',
+                                    'data-provide' => 'datepicker', 
+                                    'data-date-format' => 'dd-mm-yyyy'   
+                  )
+            ))
+         //   ->add('idFinca')
         ;
     }
     

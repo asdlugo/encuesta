@@ -15,7 +15,10 @@ class CondicionViaType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('descripcion')
+            ->add('descripcion', 'text', array(
+                 'label' =>'Descripción',    
+                 'attr' => array('placeholder' => 'Ingrese Condición de la Vía', 'class'=> 'form-control input-sm ')
+             )) 
         ;
     }
     

@@ -29,14 +29,14 @@
         {% for condicionVia in condicionVias %}
             <tr>
                 
-                <td>
+                <td style="width:10px">
                                 <center>
                                   <a href="{{ path('condicionvia_show', { 'id': condicionVia.id }) }}">
                                      <i class="glyphicon glyphicon-search"></i>
                                     </a>      
                                     </center>
                                       </td>
-                                        <td>
+                                        <td style="width:70px">
                                        <center>
                                        <a href="{{ path('condicionvia_edit', { 'id': condicionVia.id }) }}">
                                             <i class="glyphicon glyphicon-pencil"></i>
@@ -45,10 +45,7 @@
                                           </td>
                                                 
                                                  <td>{{ condicionVia.descripcion }}</td>
-                                                
-                                                <td>
-                
-                                            </tr>
+                                                 </tr>
                                         {% endfor %}
                                         </tbody>                                        
                                     </table>

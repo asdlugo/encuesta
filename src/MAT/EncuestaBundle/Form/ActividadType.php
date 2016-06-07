@@ -56,7 +56,7 @@ class ActividadType extends AbstractType
                  'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
              )) 
             ->add('bebederosCantidad', 'text', array(
-                 'label' =>'Cantidad de bebederos',    
+                 'label' =>'Cantidad de Bebederos',    
                  'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
              )) 
             ->add('bebederosObservaciones', 'text', array(
@@ -163,51 +163,186 @@ class ActividadType extends AbstractType
                  'label' =>'Cantidad de Carreta Zorra',    
                  'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
              )) 
-            ->add('carretaZorraObservaciones')
-            ->add('rotativaCantidad')
-            ->add('rotativaObservaciones')
-            ->add('roloCantidad')
-            ->add('roloObservaciones')
-            ->add('aradoCantidad')
-            ->add('aradoObservaciones')
-            ->add('surcadoraCantidad')
-            ->add('surcadoraObservaciones')
-            ->add('abonadoraCantidad')
-            ->add('abonadoraObservaciones')
-            ->add('embutidoraCantidad')
-            ->add('embutidoraObservaciones')
-            ->add('vagonForrajeroCantidad')
-            ->add('vagonForrajeroObservaciones')
-            ->add('bolsasEnsilarCantidad')
-            ->add('bolsasEnsilarObservaciones')
-            ->add('mecanicoCantidad')
-            ->add('mecanicoObservaciones')
-            ->add('manualCantidad')
-            ->add('manualObservaciones')
-            ->add('tanqueFrioCantidad')
-            ->add('tanqueFrioObservaciones')
-            ->add('cantarasCantidad')
-            ->add('cantarasObservaciones')
-            ->add('filtrosTelaCantidad')
-            ->add('filtrosTelaObservaciones')
-            ->add('paletasCmtCantidad')
-            ->add('paletasCmtObservaciones')
-            ->add('paletasFondoNegroCantidad')
-            ->add('paletasFondoNegroObservaciones')
-            ->add('reactivoCmtCantidad')
-            ->add('reactivoCmtObservaciones')
-            ->add('ordenoTechoCantidad')
-            ->add('ordenoTechoObservaciones')
-            ->add('ordenoPisoCementoCantidad')
-            ->add('ordenoPisoCementoObservaciones')
-            ->add('tanqueNitrogenoCantidad')
-            ->add('tanqueNitrogenoObservaciones')
-            ->add('cajaInseminacionCantidad')
-            ->add('cajaInseminacionObservacion')
-            ->add('pistoletaInseminacionCantidad')
-            ->add('pistoletaInseminacionObservaciones')
-            ->add('termoDescongelarPajuelasCantidad')
-            ->add('termoDescongelarPajuelasObservaciones')
+            ->add('carretaZorraObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('rotativaCantidad', 'text', array(
+                 'label' =>'Cantidad de Rotativa',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('rotativaObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('roloCantidad', 'text', array(
+                 'label' =>'Cantidad de Rolo',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('roloObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('aradoCantidad', 'text', array(
+                 'label' =>'Cantidad de Arado',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('aradoObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('surcadoraCantidad', 'text', array(
+                 'label' =>'Cantidad de Surcadora',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('surcadoraObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('abonadoraCantidad', 'text', array(
+                 'label' =>'Cantidad Abonadora',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('abonadoraObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('embutidoraCantidad', 'text', array(
+                 'label' =>'Cantidad de Embutidora',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('embutidoraObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('vagonForrajeroCantidad', 'text', array(
+                 'label' =>'Cantidad Vagón Forrajero',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('vagonForrajeroObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('bolsasEnsilarCantidad', 'text', array(
+                 'label' =>'Cantidad de Bolsas de Ensilar',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('bolsasEnsilarObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('mecanicoCantidad', 'text', array(
+                 'label' =>'Cantidad mecánico',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('mecanicoObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('manualCantidad', 'text', array(
+                 'label' =>'Cantidad de Manual',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('manualObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tanqueFrioCantidad', 'text', array(
+                 'label' =>'Cantidad Tanque Frío',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tanqueFrioObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cantarasCantidad', 'text', array(
+                 'label' =>'Cantidad de Cantaras',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cantarasObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('filtrosTelaCantidad', 'text', array(
+                 'label' =>'Cantidad Filtros de Tela',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('filtrosTelaObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('paletasCmtCantidad', 'text', array(
+                 'label' =>'Cantidad de Paletas CMT',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('paletasCmtObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('paletasFondoNegroCantidad', 'text', array(
+                 'label' =>'Cantidad Paletas Fondo Negro',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('paletasFondoNegroObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('reactivoCmtCantidad', 'text', array(
+                 'label' =>'Cantidad Reactivo CMT',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('reactivoCmtObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('ordenoTechoCantidad', 'text', array(
+                 'label' =>'Cantidad de Ordeño Techo',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('ordenoTechoObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('ordenoPisoCementoCantidad' , 'text', array(
+                 'label' =>'Cantidad de Ordeño Piso Cemento',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('ordenoPisoCementoObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tanqueNitrogenoCantidad', 'text', array(
+                 'label' =>'Cantidad de Tanque de Nitrógeno',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('tanqueNitrogenoObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cajaInseminacionCantidad', 'text', array(
+                 'label' =>'Cantidad de Caja de Inseminación',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('cajaInseminacionObservacion', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('pistoletaInseminacionCantidad', 'text', array(
+                 'label' =>'Cantidad de Pistoleta de Inseminación',    
+                 'attr' => array('placeholder' => 'Ingrese Cantidad', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('pistoletaInseminacionObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('termoDescongelarPajuelasCantidad', 'text', array(
+                 'label' =>'Cantidad de Termo Descongelar Pajuelas',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
+            ->add('termoDescongelarPajuelasObservaciones', 'text', array(
+                 'label' =>'Observaciones',    
+                 'attr' => array('placeholder' => 'Ingrese Observaciones', 'class'=> 'form-control input-sm ')
+             )) 
             ->add('fecha', 'date')
             ->add('idFinca')
         ;
