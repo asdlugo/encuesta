@@ -1,0 +1,24 @@
+finca_index:
+    path:     /
+    defaults: { _controller: "EncuestaBundle:Finca:index" }
+    methods:  GET
+
+finca_show:
+    path:     /{id}/show
+    defaults: { _controller: "EncuestaBundle:Finca:show" }
+    methods:  GET
+
+finca_new:
+    path:     /new
+    defaults: { _controller: "EncuestaBundle:Finca:new" }
+    methods:  [GET, POST]
+
+finca_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EncuestaBundle:Finca:edit" }
+    methods:  [GET, POST]
+
+finca_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EncuestaBundle:Finca:delete" }
+    methods:  DELETE

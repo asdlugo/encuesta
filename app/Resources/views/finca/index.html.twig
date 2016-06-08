@@ -1,83 +1,57 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    
-    <h1>Finca</h1>
- <!-- BEGIN CONTAINER -->
-        <div class="page-container">
-            <!-- BEGIN CONTENT -->
-                    <div class="row">
-                       <div class="col-xs-12 col-sm-12        col-md-12 col-lg-12 ">
-                            <a class="btn btn-success" href="{{ path('finca_new') }}" ><span>Agregar</span></a>
-                            <br><br>                            
-                            <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption font-green">
-                                        <i class="icon-settings font-green"></i>
-                                        <span class="caption-subject bold uppercase"></span>
-                                    </div>
-                                    <div class="tools"> </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_2">
-                                        <thead>
-                                            <tr>
-                                                <th class="all" width="10%">Detalle</th>
-                                                <th class="all" width="10%">Editar</th>
-                                                <th>Nombre</th>
-                                                <th>Ubicación</th>
-                                                <th>Parroquia</th>
-                                                <th>Sector</th>
-                                                <th>Caserío</th>
-                                                <th>Coord Norte</th>
-                                                <th>Coord Este</th>
-                                                <th>Condición vía</th>
-                                                <th>Documento INTI</th>
-                                                <th>Hierro INSAI</th>
-                                                <th>Visible</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for finca in fincas %}
-                                            <tr>
-                                                <td>
-                                                    <center>
-                                                        <a href="{{ path('finca_show', { 'id': finca.id }) }}">
-                                                            <i class="glyphicon glyphicon-search"></i>
-                                                        </a>      
-                                                    </center>
-                                                </td>
-                                                    <td>
-                                                    <center>
-                                                        <a href="{{ path('finca_edit', { 'id': finca.id }) }}">
-                                                            <i class="glyphicon glyphicon-pencil"></i>
-                                                        </a>      
-                                                    </center>
-                                                </td>
-                                                
-                                                  <td>{{ finca.nombre }}</td>
-                                                  <td>{{ finca.ubicacion }}</td>  
-                                                   <td>{{ finca.idParroquia }}</td>
-                                                    <td>{{ finca.idSector }}</td>
-                                                    <td>{{ finca.idCaserio }}</td>
-                                                    <td>{{ finca.gpsUtmNorte }}</td>
-                                                    <td>{{ finca.gpsUtmEste }}</td>
-                                                    <td>{{ finca.idCondicionVia }}</td>
-                                                    <td>{{ finca.documentoInti }}</td>
-                                                    <td>{{ finca.hierroInsai }}</td>
-                                                    <td>{% if finca.visible %}Yes{% else %}No{% endif %}</td>
-                                                    
-                                            </tr>
-                                        {% endfor %}
-                                        </tbody>                                        
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- END EXAMPLE TABLE PORTLET-->
-                        </div>
-                        
-                    </div>
-    
-       
+    <h1>Finca list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ubicacion</th>
+                <th>Idparroquia</th>
+                <th>Idsector</th>
+                <th>Idcaserio</th>
+                <th>Gpsutmnorte</th>
+                <th>Gpsutmeste</th>
+                <th>Documentointi</th>
+                <th>Hierroinsai</th>
+                <th>Visible</th>
+                <th>Nombre</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for finca in fincas %}
+            <tr>
+                <td><a href="{{ path('finca_show', { 'id': finca.id }) }}">{{ finca.ubicacion }}</a></td>
+                <td>{{ finca.idParroquia }}</td>
+                <td>{{ finca.idSector }}</td>
+                <td>{{ finca.idCaserio }}</td>
+                <td>{{ finca.gpsUtmNorte }}</td>
+                <td>{{ finca.gpsUtmEste }}</td>
+                <td>{{ finca.documentoInti }}</td>
+                <td>{{ finca.hierroInsai }}</td>
+                <td>{% if finca.visible %}Yes{% else %}No{% endif %}</td>
+                <td>{{ finca.nombre }}</td>
+                <td>{{ finca.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('finca_show', { 'id': finca.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('finca_edit', { 'id': finca.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('finca_new') }}">Create a new entry</a>
+        </li>
+    </ul>
 {% endblock %}

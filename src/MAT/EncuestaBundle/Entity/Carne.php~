@@ -61,4 +61,129 @@ class Carne
     private $idFinca;
 
 
+
+    /**
+     * Set numAnimales
+     *
+     * @param integer $numAnimales
+     * @return Carne
+     */
+    public function setNumAnimales($numAnimales)
+    {
+        $this->numAnimales = $numAnimales;
+
+        return $this;
+    }
+
+    /**
+     * Get numAnimales
+     *
+     * @return integer 
+     */
+    public function getNumAnimales()
+    {
+        return $this->numAnimales;
+    }
+
+    /**
+     * Set pesoPromVenta
+     *
+     * @param float $pesoPromVenta
+     * @return Carne
+     */
+    public function setPesoPromVenta($pesoPromVenta)
+    {
+        $this->pesoPromVenta = $pesoPromVenta;
+
+        return $this;
+    }
+
+    /**
+     * Get pesoPromVenta
+     *
+     * @return float 
+     */
+    public function getPesoPromVenta()
+    {
+        return $this->pesoPromVenta;
+    }
+
+    /**
+     * Set edadParaVenta
+     *
+     * @param integer $edadParaVenta
+     * @return Carne
+     */
+    public function setEdadParaVenta($edadParaVenta)
+    {
+        $this->edadParaVenta = $edadParaVenta;
+
+        return $this;
+    }
+
+    /**
+     * Get edadParaVenta
+     *
+     * @return integer 
+     */
+    public function getEdadParaVenta()
+    {
+        return $this->edadParaVenta;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return Carne
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idFinca
+     *
+     * @param \MAT\EncuestaBundle\Entity\Finca $idFinca
+     * @return Carne
+     */
+    public function setIdFinca(\MAT\EncuestaBundle\Entity\Finca $idFinca = null)
+    {
+        $this->idFinca = $idFinca;
+
+        return $this;
+    }
+
+    /**
+     * Get idFinca
+     *
+     * @return \MAT\EncuestaBundle\Entity\Finca 
+     */
+    public function getIdFinca()
+    {
+        return $this->idFinca;
+    }
 }

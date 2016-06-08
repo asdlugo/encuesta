@@ -61,4 +61,129 @@ class Financiamiento
     private $idFinca;
 
 
+
+    /**
+     * Set bancoInstitucion
+     *
+     * @param boolean $bancoInstitucion
+     * @return Financiamiento
+     */
+    public function setBancoInstitucion($bancoInstitucion)
+    {
+        $this->bancoInstitucion = $bancoInstitucion;
+
+        return $this;
+    }
+
+    /**
+     * Get bancoInstitucion
+     *
+     * @return boolean 
+     */
+    public function getBancoInstitucion()
+    {
+        return $this->bancoInstitucion;
+    }
+
+    /**
+     * Set requeVacas
+     *
+     * @param boolean $requeVacas
+     * @return Financiamiento
+     */
+    public function setRequeVacas($requeVacas)
+    {
+        $this->requeVacas = $requeVacas;
+
+        return $this;
+    }
+
+    /**
+     * Get requeVacas
+     *
+     * @return boolean 
+     */
+    public function getRequeVacas()
+    {
+        return $this->requeVacas;
+    }
+
+    /**
+     * Set requeNovillas
+     *
+     * @param boolean $requeNovillas
+     * @return Financiamiento
+     */
+    public function setRequeNovillas($requeNovillas)
+    {
+        $this->requeNovillas = $requeNovillas;
+
+        return $this;
+    }
+
+    /**
+     * Get requeNovillas
+     *
+     * @return boolean 
+     */
+    public function getRequeNovillas()
+    {
+        return $this->requeNovillas;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return Financiamiento
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idFinca
+     *
+     * @param \MAT\EncuestaBundle\Entity\Carne $idFinca
+     * @return Financiamiento
+     */
+    public function setIdFinca(\MAT\EncuestaBundle\Entity\Carne $idFinca = null)
+    {
+        $this->idFinca = $idFinca;
+
+        return $this;
+    }
+
+    /**
+     * Get idFinca
+     *
+     * @return \MAT\EncuestaBundle\Entity\Carne 
+     */
+    public function getIdFinca()
+    {
+        return $this->idFinca;
+    }
 }

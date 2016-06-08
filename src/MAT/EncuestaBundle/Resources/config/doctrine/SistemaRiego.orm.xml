@@ -18,7 +18,7 @@
     <field name="numCapacidadFlujo" type="integer" column="num_capacidad_flujo" nullable="true"/>
     <field name="condiciones" type="string" column="condiciones" length="255" nullable="true"/>
     <field name="fecha" type="date" column="fecha" nullable="true"/>
-    <many-to-one field="idFinca" target-entity="Carne">
+    <many-to-one field="idFinca" target-entity="Finca">
       <join-columns>
         <join-column name="id_finca" referenced-column-name="id"/>
       </join-columns>

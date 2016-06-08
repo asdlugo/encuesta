@@ -21,11 +21,11 @@ class FincaType extends AbstractType
             ->add('idCaserio')
             ->add('gpsUtmNorte')
             ->add('gpsUtmEste')
-            ->add('idCondicionVia')
             ->add('documentoInti')
             ->add('hierroInsai')
             ->add('visible')
             ->add('nombre')
+            ->add('idCondicionVia')
         ;
     }
     

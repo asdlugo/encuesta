@@ -103,4 +103,267 @@ class TipoExplotacion
     private $idFinca;
 
 
+
+    /**
+     * Set numeroVacaBecerro
+     *
+     * @param integer $numeroVacaBecerro
+     * @return TipoExplotacion
+     */
+    public function setNumeroVacaBecerro($numeroVacaBecerro)
+    {
+        $this->numeroVacaBecerro = $numeroVacaBecerro;
+
+        return $this;
+    }
+
+    /**
+     * Get numeroVacaBecerro
+     *
+     * @return integer 
+     */
+    public function getNumeroVacaBecerro()
+    {
+        return $this->numeroVacaBecerro;
+    }
+
+    /**
+     * Set numeroVacaMaute
+     *
+     * @param integer $numeroVacaMaute
+     * @return TipoExplotacion
+     */
+    public function setNumeroVacaMaute($numeroVacaMaute)
+    {
+        $this->numeroVacaMaute = $numeroVacaMaute;
+
+        return $this;
+    }
+
+    /**
+     * Get numeroVacaMaute
+     *
+     * @return integer 
+     */
+    public function getNumeroVacaMaute()
+    {
+        return $this->numeroVacaMaute;
+    }
+
+    /**
+     * Set numeroVacaNovillo
+     *
+     * @param integer $numeroVacaNovillo
+     * @return TipoExplotacion
+     */
+    public function setNumeroVacaNovillo($numeroVacaNovillo)
+    {
+        $this->numeroVacaNovillo = $numeroVacaNovillo;
+
+        return $this;
+    }
+
+    /**
+     * Get numeroVacaNovillo
+     *
+     * @return integer 
+     */
+    public function getNumeroVacaNovillo()
+    {
+        return $this->numeroVacaNovillo;
+    }
+
+    /**
+     * Set leche
+     *
+     * @param boolean $leche
+     * @return TipoExplotacion
+     */
+    public function setLeche($leche)
+    {
+        $this->leche = $leche;
+
+        return $this;
+    }
+
+    /**
+     * Get leche
+     *
+     * @return boolean 
+     */
+    public function getLeche()
+    {
+        return $this->leche;
+    }
+
+    /**
+     * Set carne
+     *
+     * @param boolean $carne
+     * @return TipoExplotacion
+     */
+    public function setCarne($carne)
+    {
+        $this->carne = $carne;
+
+        return $this;
+    }
+
+    /**
+     * Get carne
+     *
+     * @return boolean 
+     */
+    public function getCarne()
+    {
+        return $this->carne;
+    }
+
+    /**
+     * Set dobleProposito
+     *
+     * @param boolean $dobleProposito
+     * @return TipoExplotacion
+     */
+    public function setDobleProposito($dobleProposito)
+    {
+        $this->dobleProposito = $dobleProposito;
+
+        return $this;
+    }
+
+    /**
+     * Get dobleProposito
+     *
+     * @return boolean 
+     */
+    public function getDobleProposito()
+    {
+        return $this->dobleProposito;
+    }
+
+    /**
+     * Set extensivo
+     *
+     * @param boolean $extensivo
+     * @return TipoExplotacion
+     */
+    public function setExtensivo($extensivo)
+    {
+        $this->extensivo = $extensivo;
+
+        return $this;
+    }
+
+    /**
+     * Get extensivo
+     *
+     * @return boolean 
+     */
+    public function getExtensivo()
+    {
+        return $this->extensivo;
+    }
+
+    /**
+     * Set intesivo
+     *
+     * @param boolean $intesivo
+     * @return TipoExplotacion
+     */
+    public function setIntesivo($intesivo)
+    {
+        $this->intesivo = $intesivo;
+
+        return $this;
+    }
+
+    /**
+     * Get intesivo
+     *
+     * @return boolean 
+     */
+    public function getIntesivo()
+    {
+        return $this->intesivo;
+    }
+
+    /**
+     * Set semiIntensivo
+     *
+     * @param boolean $semiIntensivo
+     * @return TipoExplotacion
+     */
+    public function setSemiIntensivo($semiIntensivo)
+    {
+        $this->semiIntensivo = $semiIntensivo;
+
+        return $this;
+    }
+
+    /**
+     * Get semiIntensivo
+     *
+     * @return boolean 
+     */
+    public function getSemiIntensivo()
+    {
+        return $this->semiIntensivo;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return TipoExplotacion
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idFinca
+     *
+     * @param \MAT\EncuestaBundle\Entity\Finca $idFinca
+     * @return TipoExplotacion
+     */
+    public function setIdFinca(\MAT\EncuestaBundle\Entity\Finca $idFinca = null)
+    {
+        $this->idFinca = $idFinca;
+
+        return $this;
+    }
+
+    /**
+     * Get idFinca
+     *
+     * @return \MAT\EncuestaBundle\Entity\Finca 
+     */
+    public function getIdFinca()
+    {
+        return $this->idFinca;
+    }
 }

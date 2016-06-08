@@ -12,7 +12,7 @@
     <field name="tecnInseminacion" type="boolean" column="tecn_inseminacion" nullable="true"/>
     <field name="tecnTransfEmbriones" type="boolean" column="tecn_transf_embriones" nullable="true"/>
     <field name="fecha" type="date" column="fecha" nullable="true"/>
-    <many-to-one field="idFinca" target-entity="Carne">
+    <many-to-one field="idFinca" target-entity="Finca">
       <join-columns>
         <join-column name="id_finca" referenced-column-name="id"/>
       </join-columns>

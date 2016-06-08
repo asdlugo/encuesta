@@ -11,7 +11,7 @@
     <field name="requeVacas" type="boolean" column="reque_vacas" nullable="true"/>
     <field name="requeNovillas" type="boolean" column="reque_novillas" nullable="true"/>
     <field name="fecha" type="date" column="fecha" nullable="true"/>
-    <many-to-one field="idFinca" target-entity="Carne">
+    <many-to-one field="idFinca" target-entity="Finca">
       <join-columns>
         <join-column name="id_finca" referenced-column-name="id"/>
       </join-columns>

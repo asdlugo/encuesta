@@ -110,4 +110,291 @@ class Productor
     private $idNivelEducacion;
 
 
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Productor
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set apellido
+     *
+     * @param string $apellido
+     * @return Productor
+     */
+    public function setApellido($apellido)
+    {
+        $this->apellido = $apellido;
+
+        return $this;
+    }
+
+    /**
+     * Get apellido
+     *
+     * @return string 
+     */
+    public function getApellido()
+    {
+        return $this->apellido;
+    }
+
+    /**
+     * Set rif
+     *
+     * @param string $rif
+     * @return Productor
+     */
+    public function setRif($rif)
+    {
+        $this->rif = $rif;
+
+        return $this;
+    }
+
+    /**
+     * Get rif
+     *
+     * @return string 
+     */
+    public function getRif()
+    {
+        return $this->rif;
+    }
+
+    /**
+     * Set tlf1
+     *
+     * @param string $tlf1
+     * @return Productor
+     */
+    public function setTlf1($tlf1)
+    {
+        $this->tlf1 = $tlf1;
+
+        return $this;
+    }
+
+    /**
+     * Get tlf1
+     *
+     * @return string 
+     */
+    public function getTlf1()
+    {
+        return $this->tlf1;
+    }
+
+    /**
+     * Set tlf2
+     *
+     * @param string $tlf2
+     * @return Productor
+     */
+    public function setTlf2($tlf2)
+    {
+        $this->tlf2 = $tlf2;
+
+        return $this;
+    }
+
+    /**
+     * Get tlf2
+     *
+     * @return string 
+     */
+    public function getTlf2()
+    {
+        return $this->tlf2;
+    }
+
+    /**
+     * Set emal1
+     *
+     * @param string $emal1
+     * @return Productor
+     */
+    public function setEmal1($emal1)
+    {
+        $this->emal1 = $emal1;
+
+        return $this;
+    }
+
+    /**
+     * Get emal1
+     *
+     * @return string 
+     */
+    public function getEmal1()
+    {
+        return $this->emal1;
+    }
+
+    /**
+     * Set email2
+     *
+     * @param string $email2
+     * @return Productor
+     */
+    public function setEmail2($email2)
+    {
+        $this->email2 = $email2;
+
+        return $this;
+    }
+
+    /**
+     * Get email2
+     *
+     * @return string 
+     */
+    public function getEmail2()
+    {
+        return $this->email2;
+    }
+
+    /**
+     * Set sabeLeer
+     *
+     * @param boolean $sabeLeer
+     * @return Productor
+     */
+    public function setSabeLeer($sabeLeer)
+    {
+        $this->sabeLeer = $sabeLeer;
+
+        return $this;
+    }
+
+    /**
+     * Get sabeLeer
+     *
+     * @return boolean 
+     */
+    public function getSabeLeer()
+    {
+        return $this->sabeLeer;
+    }
+
+    /**
+     * Set exProductor
+     *
+     * @param integer $exProductor
+     * @return Productor
+     */
+    public function setExProductor($exProductor)
+    {
+        $this->exProductor = $exProductor;
+
+        return $this;
+    }
+
+    /**
+     * Get exProductor
+     *
+     * @return integer 
+     */
+    public function getExProductor()
+    {
+        return $this->exProductor;
+    }
+
+    /**
+     * Set lugarHabitacion
+     *
+     * @param string $lugarHabitacion
+     * @return Productor
+     */
+    public function setLugarHabitacion($lugarHabitacion)
+    {
+        $this->lugarHabitacion = $lugarHabitacion;
+
+        return $this;
+    }
+
+    /**
+     * Get lugarHabitacion
+     *
+     * @return string 
+     */
+    public function getLugarHabitacion()
+    {
+        return $this->lugarHabitacion;
+    }
+
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     * @return Productor
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean 
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idNivelEducacion
+     *
+     * @param \MAT\EncuestaBundle\Entity\NivelEducacion $idNivelEducacion
+     * @return Productor
+     */
+    public function setIdNivelEducacion(\MAT\EncuestaBundle\Entity\NivelEducacion $idNivelEducacion = null)
+    {
+        $this->idNivelEducacion = $idNivelEducacion;
+
+        return $this;
+    }
+
+    /**
+     * Get idNivelEducacion
+     *
+     * @return \MAT\EncuestaBundle\Entity\NivelEducacion 
+     */
+    public function getIdNivelEducacion()
+    {
+        return $this->idNivelEducacion;
+    }
+	
 }

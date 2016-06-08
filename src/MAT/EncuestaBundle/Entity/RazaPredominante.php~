@@ -152,4 +152,428 @@ class RazaPredominante
     private $idFinca;
 
 
+
+    /**
+     * Set numCebu
+     *
+     * @param integer $numCebu
+     * @return RazaPredominante
+     */
+    public function setNumCebu($numCebu)
+    {
+        $this->numCebu = $numCebu;
+
+        return $this;
+    }
+
+    /**
+     * Get numCebu
+     *
+     * @return integer 
+     */
+    public function getNumCebu()
+    {
+        return $this->numCebu;
+    }
+
+    /**
+     * Set numCriollo
+     *
+     * @param integer $numCriollo
+     * @return RazaPredominante
+     */
+    public function setNumCriollo($numCriollo)
+    {
+        $this->numCriollo = $numCriollo;
+
+        return $this;
+    }
+
+    /**
+     * Get numCriollo
+     *
+     * @return integer 
+     */
+    public function getNumCriollo()
+    {
+        return $this->numCriollo;
+    }
+
+    /**
+     * Set numHulstein
+     *
+     * @param integer $numHulstein
+     * @return RazaPredominante
+     */
+    public function setNumHulstein($numHulstein)
+    {
+        $this->numHulstein = $numHulstein;
+
+        return $this;
+    }
+
+    /**
+     * Get numHulstein
+     *
+     * @return integer 
+     */
+    public function getNumHulstein()
+    {
+        return $this->numHulstein;
+    }
+
+    /**
+     * Set numPSuizo
+     *
+     * @param integer $numPSuizo
+     * @return RazaPredominante
+     */
+    public function setNumPSuizo($numPSuizo)
+    {
+        $this->numPSuizo = $numPSuizo;
+
+        return $this;
+    }
+
+    /**
+     * Get numPSuizo
+     *
+     * @return integer 
+     */
+    public function getNumPSuizo()
+    {
+        return $this->numPSuizo;
+    }
+
+    /**
+     * Set numMestizo
+     *
+     * @param integer $numMestizo
+     * @return RazaPredominante
+     */
+    public function setNumMestizo($numMestizo)
+    {
+        $this->numMestizo = $numMestizo;
+
+        return $this;
+    }
+
+    /**
+     * Get numMestizo
+     *
+     * @return integer 
+     */
+    public function getNumMestizo()
+    {
+        return $this->numMestizo;
+    }
+
+    /**
+     * Set numOtro
+     *
+     * @param integer $numOtro
+     * @return RazaPredominante
+     */
+    public function setNumOtro($numOtro)
+    {
+        $this->numOtro = $numOtro;
+
+        return $this;
+    }
+
+    /**
+     * Get numOtro
+     *
+     * @return integer 
+     */
+    public function getNumOtro()
+    {
+        return $this->numOtro;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return RazaPredominante
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set numToros
+     *
+     * @param integer $numToros
+     * @return RazaPredominante
+     */
+    public function setNumToros($numToros)
+    {
+        $this->numToros = $numToros;
+
+        return $this;
+    }
+
+    /**
+     * Get numToros
+     *
+     * @return integer 
+     */
+    public function getNumToros()
+    {
+        return $this->numToros;
+    }
+
+    /**
+     * Set numTorosReproductores
+     *
+     * @param integer $numTorosReproductores
+     * @return RazaPredominante
+     */
+    public function setNumTorosReproductores($numTorosReproductores)
+    {
+        $this->numTorosReproductores = $numTorosReproductores;
+
+        return $this;
+    }
+
+    /**
+     * Get numTorosReproductores
+     *
+     * @return integer 
+     */
+    public function getNumTorosReproductores()
+    {
+        return $this->numTorosReproductores;
+    }
+
+    /**
+     * Set numVacasProduccion
+     *
+     * @param integer $numVacasProduccion
+     * @return RazaPredominante
+     */
+    public function setNumVacasProduccion($numVacasProduccion)
+    {
+        $this->numVacasProduccion = $numVacasProduccion;
+
+        return $this;
+    }
+
+    /**
+     * Get numVacasProduccion
+     *
+     * @return integer 
+     */
+    public function getNumVacasProduccion()
+    {
+        return $this->numVacasProduccion;
+    }
+
+    /**
+     * Set numVacasSecas
+     *
+     * @param integer $numVacasSecas
+     * @return RazaPredominante
+     */
+    public function setNumVacasSecas($numVacasSecas)
+    {
+        $this->numVacasSecas = $numVacasSecas;
+
+        return $this;
+    }
+
+    /**
+     * Get numVacasSecas
+     *
+     * @return integer 
+     */
+    public function getNumVacasSecas()
+    {
+        return $this->numVacasSecas;
+    }
+
+    /**
+     * Set numNovillos
+     *
+     * @param integer $numNovillos
+     * @return RazaPredominante
+     */
+    public function setNumNovillos($numNovillos)
+    {
+        $this->numNovillos = $numNovillos;
+
+        return $this;
+    }
+
+    /**
+     * Get numNovillos
+     *
+     * @return integer 
+     */
+    public function getNumNovillos()
+    {
+        return $this->numNovillos;
+    }
+
+    /**
+     * Set numNovillas
+     *
+     * @param integer $numNovillas
+     * @return RazaPredominante
+     */
+    public function setNumNovillas($numNovillas)
+    {
+        $this->numNovillas = $numNovillas;
+
+        return $this;
+    }
+
+    /**
+     * Get numNovillas
+     *
+     * @return integer 
+     */
+    public function getNumNovillas()
+    {
+        return $this->numNovillas;
+    }
+
+    /**
+     * Set numMautes
+     *
+     * @param integer $numMautes
+     * @return RazaPredominante
+     */
+    public function setNumMautes($numMautes)
+    {
+        $this->numMautes = $numMautes;
+
+        return $this;
+    }
+
+    /**
+     * Get numMautes
+     *
+     * @return integer 
+     */
+    public function getNumMautes()
+    {
+        return $this->numMautes;
+    }
+
+    /**
+     * Set numMautas
+     *
+     * @param integer $numMautas
+     * @return RazaPredominante
+     */
+    public function setNumMautas($numMautas)
+    {
+        $this->numMautas = $numMautas;
+
+        return $this;
+    }
+
+    /**
+     * Get numMautas
+     *
+     * @return integer 
+     */
+    public function getNumMautas()
+    {
+        return $this->numMautas;
+    }
+
+    /**
+     * Set numBecerros
+     *
+     * @param integer $numBecerros
+     * @return RazaPredominante
+     */
+    public function setNumBecerros($numBecerros)
+    {
+        $this->numBecerros = $numBecerros;
+
+        return $this;
+    }
+
+    /**
+     * Get numBecerros
+     *
+     * @return integer 
+     */
+    public function getNumBecerros()
+    {
+        return $this->numBecerros;
+    }
+
+    /**
+     * Set numBecerras
+     *
+     * @param integer $numBecerras
+     * @return RazaPredominante
+     */
+    public function setNumBecerras($numBecerras)
+    {
+        $this->numBecerras = $numBecerras;
+
+        return $this;
+    }
+
+    /**
+     * Get numBecerras
+     *
+     * @return integer 
+     */
+    public function getNumBecerras()
+    {
+        return $this->numBecerras;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idFinca
+     *
+     * @param \MAT\EncuestaBundle\Entity\Finca $idFinca
+     * @return RazaPredominante
+     */
+    public function setIdFinca(\MAT\EncuestaBundle\Entity\Finca $idFinca = null)
+    {
+        $this->idFinca = $idFinca;
+
+        return $this;
+    }
+
+    /**
+     * Get idFinca
+     *
+     * @return \MAT\EncuestaBundle\Entity\Finca 
+     */
+    public function getIdFinca()
+    {
+        return $this->idFinca;
+    }
 }

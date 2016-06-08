@@ -96,4 +96,244 @@ class FuenteAgua
     private $idFinca;
 
 
+
+    /**
+     * Set pozo
+     *
+     * @param boolean $pozo
+     * @return FuenteAgua
+     */
+    public function setPozo($pozo)
+    {
+        $this->pozo = $pozo;
+
+        return $this;
+    }
+
+    /**
+     * Get pozo
+     *
+     * @return boolean 
+     */
+    public function getPozo()
+    {
+        return $this->pozo;
+    }
+
+    /**
+     * Set represa
+     *
+     * @param boolean $represa
+     * @return FuenteAgua
+     */
+    public function setRepresa($represa)
+    {
+        $this->represa = $represa;
+
+        return $this;
+    }
+
+    /**
+     * Get represa
+     *
+     * @return boolean 
+     */
+    public function getRepresa()
+    {
+        return $this->represa;
+    }
+
+    /**
+     * Set acueducto
+     *
+     * @param boolean $acueducto
+     * @return FuenteAgua
+     */
+    public function setAcueducto($acueducto)
+    {
+        $this->acueducto = $acueducto;
+
+        return $this;
+    }
+
+    /**
+     * Get acueducto
+     *
+     * @return boolean 
+     */
+    public function getAcueducto()
+    {
+        return $this->acueducto;
+    }
+
+    /**
+     * Set laguna
+     *
+     * @param boolean $laguna
+     * @return FuenteAgua
+     */
+    public function setLaguna($laguna)
+    {
+        $this->laguna = $laguna;
+
+        return $this;
+    }
+
+    /**
+     * Get laguna
+     *
+     * @return boolean 
+     */
+    public function getLaguna()
+    {
+        return $this->laguna;
+    }
+
+    /**
+     * Set rioQuebrada
+     *
+     * @param boolean $rioQuebrada
+     * @return FuenteAgua
+     */
+    public function setRioQuebrada($rioQuebrada)
+    {
+        $this->rioQuebrada = $rioQuebrada;
+
+        return $this;
+    }
+
+    /**
+     * Get rioQuebrada
+     *
+     * @return boolean 
+     */
+    public function getRioQuebrada()
+    {
+        return $this->rioQuebrada;
+    }
+
+    /**
+     * Set manantial
+     *
+     * @param boolean $manantial
+     * @return FuenteAgua
+     */
+    public function setManantial($manantial)
+    {
+        $this->manantial = $manantial;
+
+        return $this;
+    }
+
+    /**
+     * Get manantial
+     *
+     * @return boolean 
+     */
+    public function getManantial()
+    {
+        return $this->manantial;
+    }
+
+    /**
+     * Set publico
+     *
+     * @param boolean $publico
+     * @return FuenteAgua
+     */
+    public function setPublico($publico)
+    {
+        $this->publico = $publico;
+
+        return $this;
+    }
+
+    /**
+     * Get publico
+     *
+     * @return boolean 
+     */
+    public function getPublico()
+    {
+        return $this->publico;
+    }
+
+    /**
+     * Set privado
+     *
+     * @param boolean $privado
+     * @return FuenteAgua
+     */
+    public function setPrivado($privado)
+    {
+        $this->privado = $privado;
+
+        return $this;
+    }
+
+    /**
+     * Get privado
+     *
+     * @return boolean 
+     */
+    public function getPrivado()
+    {
+        return $this->privado;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return FuenteAgua
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idFinca
+     *
+     * @param \MAT\EncuestaBundle\Entity\Finca $idFinca
+     * @return FuenteAgua
+     */
+    public function setIdFinca(\MAT\EncuestaBundle\Entity\Finca $idFinca = null)
+    {
+        $this->idFinca = $idFinca;
+
+        return $this;
+    }
+
+    /**
+     * Get idFinca
+     *
+     * @return \MAT\EncuestaBundle\Entity\Finca 
+     */
+    public function getIdFinca()
+    {
+        return $this->idFinca;
+    }
 }

@@ -30,10 +30,6 @@
                 <td>{{ finca.gpsUtmEste }}</td>
             </tr>
             <tr>
-                <th>Idcondicionvia</th>
-                <td>{{ finca.idCondicionVia }}</td>
-            </tr>
-            <tr>
                 <th>Documentointi</th>
                 <td>{{ finca.documentoInti }}</td>
             </tr>
@@ -58,14 +54,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('finca_index') }}">Volver a la lista</a>
+            <a href="{{ path('finca_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('finca_edit', { 'id': finca.id }) }}">Editar</a>
+            <a href="{{ path('finca_edit', { 'id': finca.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Eliminar">
+                <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>

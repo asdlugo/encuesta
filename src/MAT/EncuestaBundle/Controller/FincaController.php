@@ -4,23 +4,19 @@ namespace MAT\EncuestaBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 use MAT\EncuestaBundle\Entity\Finca;
 use MAT\EncuestaBundle\Form\FincaType;
 
 /**
  * Finca controller.
  *
- * @Route("/finca")
  */
 class FincaController extends Controller
 {
     /**
      * Lists all Finca entities.
      *
-     * @Route("/", name="finca_index")
-     * @Method("GET")
      */
     public function indexAction()
     {
@@ -36,8 +32,6 @@ class FincaController extends Controller
     /**
      * Creates a new Finca entity.
      *
-     * @Route("/new", name="finca_new")
-     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -62,8 +56,6 @@ class FincaController extends Controller
     /**
      * Finds and displays a Finca entity.
      *
-     * @Route("/{id}", name="finca_show")
-     * @Method("GET")
      */
     public function showAction(Finca $finca)
     {
@@ -78,8 +70,6 @@ class FincaController extends Controller
     /**
      * Displays a form to edit an existing Finca entity.
      *
-     * @Route("/{id}/edit", name="finca_edit")
-     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Finca $finca)
     {
@@ -105,8 +95,6 @@ class FincaController extends Controller
     /**
      * Deletes a Finca entity.
      *
-     * @Route("/{id}", name="finca_delete")
-     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Finca $finca)
     {

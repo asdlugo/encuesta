@@ -1,3 +1,7 @@
+encuesta_finca:
+    resource: "@EncuestaBundle/Resources/config/routing/finca.yml"
+    prefix:   /finca
+
 encuesta_homepage:
     path:     /
     defaults: { _controller: EncuestaBundle:Default:index }
