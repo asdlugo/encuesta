@@ -5,6 +5,7 @@ namespace MAT\EncuestaBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class FincaType extends AbstractType
 {
@@ -37,9 +38,10 @@ class FincaType extends AbstractType
              )) 
             ->add('gpsUtmNorte')
             ->add('gpsUtmEste')
-            ->add('idCondicionVia', 'text', array(
+            ->add('idCondicionVia', ChoiceType::class, array(
                  'label' =>'Condición de la Vía',    
-                 'attr' => array('placeholder' => 'Ingrese Condición de la Vía', 'class'=> 'form-control input-sm ')
+                'placeholder' => 'Ingrese Condición de la Vía',
+                 'attr' => array( 'class'=> 'form-control input-sm ')
              )) 
             ->add('documentoInti')
             ->add('hierroInsai')

@@ -21,7 +21,16 @@ class RazaPredominanteType extends AbstractType
             ->add('numPSuizo')
             ->add('numMestizo')
             ->add('numOtro')
-            ->add('fecha', 'date')
+            ->add('fecha', 'date', array(
+                   'widget' => 'single_text',
+                    'format' => 'dd-MM-yyyy',
+                   'attr' => array(   
+                                    
+                                    'class'=> 'form-control input-small datepicker',
+                                    'data-provide' => 'datepicker', 
+                                    'data-date-format' => 'dd-mm-yyyy'   
+                  )
+            ))
             ->add('numToros')
             ->add('numTorosReproductores')
             ->add('numVacasProduccion')
