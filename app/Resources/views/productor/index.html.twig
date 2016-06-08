@@ -2,23 +2,38 @@
 
 {% block body %}
     <h1>Productor</h1>
-
-    <table>
+<!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN CONTENT -->
+                    <div class="row">
+                       <div class="col-xs-12 col-sm-12        col-md-12 col-lg-12 ">
+                            <a class="btn btn-success" href="{{ path('condicionvia_new') }}" ><span>Agregar</span></a>
+                            <br><br>                            
+                            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-green">
+                                        <i class="icon-settings font-green"></i>
+                                        <span class="caption-subject bold uppercase"></span>
+                                    </div>
+                                    <div class="tools"> </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_2">
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Rif</th>
-                <th>Tlf1</th>
-                <th>Tlf2</th>
-                <th>Emal1</th>
-                <th>Email2</th>
-                <th>Sabeleer</th>
-                <th>Exproductor</th>
-                <th>Lugarhabitacion</th>
+                <th>Teléfono 1</th>
+                <th>Teléfono 2</th>
+                <th>Emal 1</th>
+                <th>Email 2</th>
+                <th>Sabe leer</th>
+                <th>Experiencia como productor</th>
+                <th>Lugar de habitacion</th>
                 <th>Visible</th>
-                <th>Id</th>
-                <th>Actions</th>
+                
             </tr>
         </thead>
         <tbody>

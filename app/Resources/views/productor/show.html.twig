@@ -18,31 +18,31 @@
                 <td>{{ productor.rif }}</td>
             </tr>
             <tr>
-                <th>Tlf1</th>
+                <th>Teléfono 1</th>
                 <td>{{ productor.tlf1 }}</td>
             </tr>
             <tr>
-                <th>Tlf2</th>
+                <th>Teléfono 2</th>
                 <td>{{ productor.tlf2 }}</td>
             </tr>
             <tr>
-                <th>Emal1</th>
+                <th>Emal 1</th>
                 <td>{{ productor.emal1 }}</td>
             </tr>
             <tr>
-                <th>Email2</th>
+                <th>Email 2</th>
                 <td>{{ productor.email2 }}</td>
             </tr>
             <tr>
-                <th>Sabeleer</th>
+                <th>Sabe leer</th>
                 <td>{% if productor.sabeLeer %}Yes{% else %}No{% endif %}</td>
             </tr>
             <tr>
-                <th>Exproductor</th>
+                <th>Experiencia como productor</th>
                 <td>{{ productor.exProductor }}</td>
             </tr>
             <tr>
-                <th>Lugarhabitacion</th>
+                <th>Lugar de habitación</th>
                 <td>{{ productor.lugarHabitacion }}</td>
             </tr>
             <tr>
@@ -56,17 +56,14 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('productor_index') }}">Back to the list</a>
-        </li>
-        <li>
+    
+        
+            <a class="btn btn-success" href="{{ path('productor_index') }}" ><span>Regresar a la lista </span></a>
+         
             <a href="{{ path('productor_edit', { 'id': productor.id }) }}">Editar</a>
-        </li>
-        <li>
+        
             {{ form_start(delete_form) }}
                 <input type="submit" value="Eliminar">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+       
 {% endblock %}

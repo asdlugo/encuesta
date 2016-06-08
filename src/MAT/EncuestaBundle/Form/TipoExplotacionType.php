@@ -24,7 +24,16 @@ class TipoExplotacionType extends AbstractType
             ->add('extensivo')
             ->add('intesivo')
             ->add('semiIntensivo')
-            ->add('fecha', 'date')
+            ->add('fecha', 'date', array(
+                   'widget' => 'single_text',
+                    'format' => 'dd-MM-yyyy',
+                   'attr' => array(   
+                                    
+                                    'class'=> 'form-control input-small datepicker',
+                                    'data-provide' => 'datepicker', 
+                                    'data-date-format' => 'dd-mm-yyyy'   
+                  )
+            ))
             ->add('idFinca')
         ;
     }

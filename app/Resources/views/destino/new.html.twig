@@ -12,11 +12,11 @@
                 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Crear" />
+        
     {{ form_end(form) }}
 
-
-                    <button type="button" class="btn btn-primary"  id="clear">Limpiar</button>
+    <br>
+    <button type="button" class="btn btn-primary"  id="clear">Limpiar</button>
                     <a href="{{ path('destino_index') }}" class="btn btn-danger" role="button">Cancelar</a>
                     <button type="submit" class="btn btn-success ">Enviar</button>
                     {{ form_end(form) }}
