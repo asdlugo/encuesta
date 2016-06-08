@@ -2,14 +2,31 @@
 
 {% block body %}
     <h1>Nivel de Educación</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Descripcion</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
+<div class="page-container">
+            <!-- BEGIN CONTENT -->
+                    <div class="row">
+                       <div class="col-xs-12 col-sm-12        col-md-12 col-lg-12 ">
+                            <a class="btn btn-success" href="{{ path('manejoreproductivo_new') }}" ><span>Agregar</span></a>
+                            <br><br>                            
+                            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-green">
+                                        <i class="icon-settings font-green"></i>
+                                        <span class="caption-subject bold uppercase"></span>
+                                    </div>
+                                    <div class="tools"> </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_2">
+                                        <thead>
+                                            <tr>
+                                                 <th>Detalle</th>
+                                                 <th>Editar</th>
+                                                <th>Descripcion</th>
+                                                <th>Id</th>
+                                                <th>Actions</th>
+                                            </tr>
         </thead>
         <tbody>
         {% for nivelEducacion in nivelEducacions %}
@@ -29,11 +46,5 @@
             </tr>
         {% endfor %}
         </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('niveleducacion_new') }}">Crear nueva entrada</a>
-        </li>
-    </ul>
 {% endblock %}

@@ -2,27 +2,60 @@
 
 {% block body %}
     <h1>Financiamiento</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Bancoinstitucion</th>
-                <th>Requevacas</th>
-                <th>Requenovillas</th>
-                <th>Fecha</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
+<div class="page-container">
+            <!-- BEGIN CONTENT -->
+                    <div class="row">
+                       <div class="col-xs-12 col-sm-12        col-md-12 col-lg-12 ">
+                            <a class="btn btn-success" href="{{ path('financiamiento_new') }}" ><span>Agregar</span></a>
+                            <br><br>                            
+                            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-green">
+                                        <i class="icon-settings font-green"></i>
+                                        <span class="caption-subject bold uppercase"></span>
+                                    </div>
+                                    <div class="tools"> </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_2">
+                                        <thead>
+                                            <tr>
+                                                <th>Detalle</th>
+                                                 <th>Editar</th>
+                                                <th>Banco o Institución</th>
+                                                <th>Requerimiento de vacas</th>
+                                                <th>Requerimiento de novillas</th>
+                                                <th>Fecha</th>
+                                                <th>Id</th>
+                                                <th>Actions</th>
+                                            </tr>
         </thead>
         <tbody>
         {% for financiamiento in financiamientos %}
             <tr>
-                <td><a href="{{ path('financiamiento_show', { 'id': financiamiento.id }) }}">{{ financiamiento.bancoInstitucion }}</a></td>
-                <td>{% if financiamiento.requeVacas %}Yes{% else %}No{% endif %}</td>
-                <td>{% if financiamiento.requeNovillas %}Yes{% else %}No{% endif %}</td>
-                <td>{% if financiamiento.fecha %}{{ financiamiento.fecha|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ financiamiento.id }}</td>
-                <td>
+                                               
+                                                 <td>
+                                                    <center>
+                                                        <a href="{{ path('actividad_show', { 'id': finca.id }) }}">
+                                                            <i class="glyphicon glyphicon-search"></i>
+                                                        </a>      
+                                                    </center>
+                                                </td>
+                                                    <td>
+                                                    <center>
+                                                        <a href="{{ path('actividad_edit', { 'id': finca.id }) }}">
+                                                            <i class="glyphicon glyphicon-pencil"></i>
+                                                        </a>      
+                                                    </center>
+                                                </td>
+
+                                                <td><a href="{{ path('financiamiento_show', { 'id': financiamiento.id }) }}">{{ financiamiento.bancoInstitucion }}</a></td>
+                                                <td>{% if financiamiento.requeVacas %}Yes{% else %}No{% endif %}</td>
+                                                <td>{% if financiamiento.requeNovillas %}Yes{% else %}No{% endif %}</td>
+                                                <td>{% if financiamiento.fecha %}{{ financiamiento.fecha|date('Y-m-d') }}{% endif %}</td>
+                                                <td>{{ financiamiento.id }}</td>
+                                                <td>
                     <ul>
                         <li>
                             <a href="{{ path('financiamiento_show', { 'id': financiamiento.id }) }}">Mostrar</a>
